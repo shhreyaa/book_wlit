@@ -63,68 +63,90 @@
     <div class="gtco-loader"></div>
 
     <div id="page">
-            <nav class="gtco-nav" role="navigation">
-                <div class="gtco-container">
-                    <div class="row">
-                        <div class="col-xs-2">
-                            <div id="gtco-logo"><a href="/">Kitablover</a></div>
-                        </div>
-                        <div class="col-xs-10 text-right menu-1">
-                            <ul>
-                                <li class="active"><a href="/">Home</a></li>
-                                <li><a href="/register"> Register </a></li>
-                                <li class="has-dropdown">
-                                    <a href="">Buy books </a>
-            
-                                </li>
-                                <li class="has-dropdown">
-                                    <a href="#">Sell books </a>
-            
-                                </li>
-                                <li><a href="/exchangeorsell">Exchange books </a></li>
-                            </ul>
-                        </div>
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <div id="gtco-logo"><a href="/">Kitablover</a></div>
                     </div>
-            
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="/register"> Register </a></li>
+                            <li class="has-dropdown">
+                                <a href="">Buy books </a>
+
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="#">Sell books </a>
+
+                            </li>
+                            <li><a href="/exchangeorsell">Exchange books </a></li>
+                        </ul>
+                    </div>
                 </div>
-            </nav> </nav>
+
+            </div>
+        </nav>
+
         <div id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner"
-            style="background-image:url(images/img_bg_1.jpg); ">
+            style="background-image:url(images/book.jpg); ">
             <div class="overlay"></div>
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <div class="display-t">
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                                <h3>Log In</h3>
-                                <form action="/adduser" method = 'post'>
-                               
+                                <h3>Register</h3>
+                                <form action="#">
+                                    <div class="row form-group">
+                                        <div class="col-md-6">
+                                            <label for="bname">Book Name</label>
+                                            <input type="text" id="bname" class="form-control"
+                                                placeholder="Book name" name='name'>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="author">Author</label>
+                                            <input type="text" id="author" class="form-control"
+                                                placeholder="Author" name='author'>
+                                        </div>
+                                    </div>
 
                                     <div class="row form-group">
                                         <div class="col-md-12">
-                                            <label for="email">Email</label>
+                                            <label for="Price">Price</label>
                                             <input type="text" id="email" class="form-control"
-                                                placeholder="Your email address">
+                                                placeholder="Price" name='price'>
                                         </div>
                                     </div>
 
                                     <div class="row form-group">
                                         <div class="col-md-12">
-                                            <label for="subject">Password</label>
-                                            <input type="password" id="Password" class="form-control"
-                                                placeholder="Password">
+                                            <label for="subject">Genre</label>
+                                            <input type="text" id="Description" class="form-control" placeholder="Genre" name='genre'>
                                         </div>
                                     </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label for="subject">Description</label>
+                                            <input type="text" id="Description" class="form-control"
+                                                placeholder="Description" name='description'>
+                                        </div>
+                                    </div>
+                                    
 
-                                    <!-- <div class="row form-group">
-                                                                <div class="col-md-12">
-                                                                    <label for="message">Confrim password</label>
-                                                                    <input type="password" id="ConfirmPassword" class="form-control"
-                                                                        placeholder="Password">
-                                                                </div>
-                                                            </div> -->
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label for="message">Do you want to Sell or Exchange</label>
+                                            <select name='sellorexchange'>
+                                                <option>Sell</option>
+                                                <option>Exchange</option>
+                                               
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
-                                        <input type="submit" value="Log In" class="btn btn-primary">
+                                        <input type="submit" value="Register" class="btn btn-primary">
                                     </div>
 
                                 </form>

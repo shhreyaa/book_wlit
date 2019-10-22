@@ -2,12 +2,23 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/LogIn', function(req, res, next) {
-  res.render('LogIn', { title: 'Express' });
+router.get('/', function(req, res, next) {
+  res.render('index');
 });
-router.get('/Register', function (req, res, next) {
-  res.render('Register', { title: 'Express' });
+
+
+
+router.get("/register", function(req,res, next)
+{
+  res.render("Register")
 });
+
+
+router.get("/exchangeorsell", function (req, res, next) {
+  res.render("Exchange", {})
+});
+
+
 
 
 
