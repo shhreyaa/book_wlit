@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/home', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.render('index');
 });
 
@@ -10,18 +10,14 @@ router.get('/home', function(req, res, next) {
 
 router.get("/register", function(req,res, next)
 {
-  res.render("register")
+  res.render("Register")
 });
 
-router.get("/buy books", function (req, res, next) {
-  res.render("")
+
+router.get("/exchangeorsell", function (req, res, next) {
+  res.render("Exchange", {})
 });
-router.get("/sell books", function (req, res, next) {
-  res.render("")
-});
-router.get("/register", function (req, res, next) {
-  res.render("/")
-});
+
 
 
 
