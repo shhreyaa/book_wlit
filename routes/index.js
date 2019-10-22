@@ -12,10 +12,13 @@ router.get("/register", function(req,res, next)
 {
   res.render("Register")
 });
+router.get("/LogIn", function (req, res, next) {
+  res.render("LogIn")
+});
 
 
 router.get("/exchangeorsell", function (req, res, next) {
-  res.render("Exchange", {})
+  res.render("ExchangeorSell", {})
 });
 
 
