@@ -10,8 +10,13 @@ router.get('/home', function(req, res, next) {
 
 router.get("/register", function(req,res, next)
 {
-  res.render("",{})
+  res.render("LogIn")
 });
+
+router.post("/adduser", function (req, res, next) {
+  res.render("LogIn")
+});
+
 router.get("/buy books", function (req, res, next) {
   res.render("/", {})
 });
