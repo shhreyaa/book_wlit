@@ -235,11 +235,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-bg {
   background-size: cover;
   background-position: top center;
-<<<<<<< HEAD
   background-repeat: no-repeat;
-=======
-  background-repeat: repeat;
->>>>>>> 3f0c93978619ceae887eb2014399cb4c5159662e
   position: relative;
 }
 
@@ -249,7 +245,6 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left;
   position: relative;
 }
-<<<<<<< HEAD
 .text{
     
         align: centre;
@@ -269,69 +264,6 @@ h1, h2, h3, h4, h5, h6, figure {
 
  
 
-=======
-
-.gtco-video {
-  height: 450px;
-  overflow: hidden;
-  margin-bottom: 30px;
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  border-radius: 7px;
-}
-.gtco-video.gtco-video-sm {
-  height: 250px;
-}
-.gtco-video a {
-  z-index: 1001;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -45px;
-  margin-left: -45px;
-  width: 90px;
-  height: 90px;
-  display: table;
-  text-align: center;
-  background: #fff;
-  -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-}
-.gtco-video a i {
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
-  font-size: 40px;
-}
-.gtco-video .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-.gtco-video:hover .overlay {
-  background: rgba(0, 0, 0, 0.7);
-}
-.gtco-video:hover a {
-  position: relative;
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
-}
->>>>>>> 3f0c93978619ceae887eb2014399cb4c5159662e
 
 .gtco-cover {
   height: 900px;
@@ -381,19 +313,11 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .gtco-cover.gtco-cover-sm {
-<<<<<<< HEAD
   height: 600px;
 }
 @media screen and (max-width: 768px) {
   .gtco-cover.gtco-cover-sm {
     height: 400px;
-=======
-  height: 100%;
-}
-@media screen and (max-width: 100%) {
-  .gtco-cover.gtco-cover-sm {
-    height: 100%;
->>>>>>> 3f0c93978619ceae887eb2014399cb4c5159662e
   }
 }
 .gtco-cover.gtco-cover-sm .display-t,
@@ -409,63 +333,10 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
-<<<<<<< HEAD
 
 
 
 
-=======
-#gtco-counter {
-  height: 500px;
-}
-#gtco-counter .display-t,
-#gtco-counter .display-tc {
-  height: 500px;
-  display: table;
-  width: 100%;
-}
-@media screen and (max-width: 768px) {
-  #gtco-counter {
-    height: inherit;
-    padding: 7em 0;
-  }
-  #gtco-counter .display-t,
-  #gtco-counter .display-tc {
-    height: inherit;
-  }
-}
-
-.gtco-staff {
-  text-align: center;
-  margin-bottom: 30px;
-}
-.gtco-staff img {
-  width: 100px;
-  margin-bottom: 20px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-}
-.gtco-staff h3 {
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-.gtco-staff p {
-  margin-bottom: 30px;
-}
-.gtco-staff .role {
-  color: #bfbfbf;
-  margin-bottom: 30px;
-  font-weight: normal;
-  display: block;
-}
-
-.gtco-social-icons {
-  margin: 0;
-  padding: 0;
-}
->>>>>>> 3f0c93978619ceae887eb2014399cb4c5159662e
 .gtco-social-icons li {
   margin: 0;
   padding: 0;
@@ -800,7 +671,6 @@ form label {
 }
 #gtco-testimonial .arrow-thumb a:hover, #gtco-testimonial .arrow-thumb a:focus, #gtco-testimonial .arrow-thumb a:active {
   text-decoration: none;
-<<<<<<< HEAD
 }
 
 .gtco-tabs .gtco-tab-nav {
@@ -840,47 +710,6 @@ form label {
   border-radius: 4px;
   color: #b3b3b3;
 }
-=======
-}
-
-.gtco-tabs .gtco-tab-nav {
-  clear: both;
-  margin: 0 0 3em 0;
-  padding: 3px;
-  float: left;
-  width: 100%;
-  background: #f2f2f2;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-}
-.gtco-tabs .gtco-tab-nav li {
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-  text-align: center;
-  list-style: none;
-  display: -moz-inline-stack;
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-}
-.gtco-tabs .gtco-tab-nav li .icon {
-  font-size: 30px;
-}
-.gtco-tabs .gtco-tab-nav li a {
-  padding: 20px;
-  width: 100%;
-  float: left;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  color: #b3b3b3;
-}
->>>>>>> 3f0c93978619ceae887eb2014399cb4c5159662e
 .gtco-tabs .gtco-tab-nav li a:hover {
   color: #4d4d4d;
 }
