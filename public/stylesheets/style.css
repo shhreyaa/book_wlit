@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #828282;
-  background: #fff;
+  background:WHITE;
 }
 
 #page {
@@ -42,7 +42,7 @@ body {
   bottom: 0;
   left: 0;
   z-index: 101;
-  background: rgba(0, 0, 0, 0.7);
+  
   content: "";
 }
 
@@ -70,17 +70,17 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 ::-webkit-selection {
-  color: #fff;
+  color: #F85A16;
   background: #F85A16;
 }
 
 ::-moz-selection {
-  color: #fff;
+  color:#F85A16;
   background: #F85A16;
 }
 
 ::selection {
-  color: #fff;
+  color:#F85A16;
   background: #F85A16;
 }
 
@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .gtco-nav a {
   padding: 5px 10px;
-  color: #fff;
+  color:black;
 }
 @media screen and (max-width: 768px) {
   .gtco-nav .menu-1, .gtco-nav .menu-2 {
@@ -136,13 +136,13 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 14px;
   padding: 30px 10px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.5);
+  color:purple;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 .gtco-nav ul li a:hover, .gtco-nav ul li a:focus, .gtco-nav ul li a:active {
-  color: white;
+  color: #F85A16;
 }
 .gtco-nav ul li.has-dropdown {
   position: relative;
@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 40px;
   left: 0;
   text-align: left;
-  background: #fff;
+  background: #F85A16;
   padding: 20px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -192,22 +192,22 @@ h1, h2, h3, h4, h5, h6, figure {
 .gtco-nav ul li.has-dropdown .dropdown li a {
   padding: 2px 0;
   display: block;
-  color: #999999;
+  color: #F85A16;
   line-height: 1.2;
   text-transform: none;
   font-size: 15px;
 }
 .gtco-nav ul li.has-dropdown .dropdown li a:hover {
-  color: #000;
+  color: rgb(207, 188, 188);
 }
 .gtco-nav ul li.has-dropdown:hover a, .gtco-nav ul li.has-dropdown:focus a {
-  color: #fff;
+  color: #F85A16;
 }
 .gtco-nav ul li.btn-cta a {
   color: #F85A16;
 }
 .gtco-nav ul li.btn-cta a span {
-  background: #fff;
+  background: #000;
   padding: 4px 20px;
   display: -moz-inline-stack;
   display: inline-block;
@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5, h6, figure {
   box-shadow: 0px 14px 20px -9px rgba(0, 0, 0, 0.75);
 }
 .gtco-nav ul li.active > a {
-  color: #fff !important;
+  color: #F85A16 !important;
 }
 
 #gtco-header,
@@ -251,10 +251,8 @@ h1, h2, h3, h4, h5, h6, figure {
         align-content: centre;
         background-color: rgba(0,0,0,0.8);
         width: 400em;
-       
-        
-        margin:30em 300em 150em 450em;
-        color: white;
+         margin:30em 300em 150em 450em;
+        color: #F85A16;
         font-size: 25em;
         padding: 20em;
         border-radius: 20em  ;
@@ -279,8 +277,8 @@ h1, h2, h3, h4, h5, h6, figure {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .gtco-cover a:hover {
-  color: white;
-  border-bottom: 1px solid white;
+  color: #F85A16;
+  border-bottom: 1px solid #F85A16;
 }
 .gtco-cover .overlay {
   z-index: 1;
@@ -289,7 +287,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0); //foroverlay
 }
 .gtco-cover > .gtco-container {
   position: relative;
@@ -425,7 +423,7 @@ form label {
 .gtco-cover .display-tc h2 {
   margin: 0;
   padding: 0;
-  color: white;
+  color: #F85A16;
   text-transform: uppercase;
 }
 #gtco-header .display-tc h1,
@@ -1024,11 +1022,11 @@ form label {
   transition: all .2s ease-out;
 }
 .gtco-nav-toggle.gtco-nav-white > i {
-  color: #fff;
-  background: #fff;
+  color: #F85A16;
+  background: #F85A16;
 }
 .gtco-nav-toggle.gtco-nav-white > i::before, .gtco-nav-toggle.gtco-nav-white > i::after {
-  background: #fff;
+  background:#F85A16;
 }
 
 .gtco-nav-toggle i::before {
@@ -1217,15 +1215,15 @@ form label {
 }
 .btn-white:hover, .btn-white:focus, .btn-white:active {
   color: #000;
-  background: #f2f2f2 !important;
-  border-color: #f2f2f2 !important;
+  background: #F85A16 !important;
+  border-color: #F85A16 !important;
 }
 .btn-white.btn-outline {
-  color: #fff;
-  border: 2px solid #fff;
+  color: #F85A16;
+  border: 2px solid #F85A16;
 }
 .btn-white.btn-outline:hover, .btn-white.btn-outline:focus, .btn-white.btn-outline:active {
-  background: #fff;
+  background: #F85A16;
   color: #000;
   border: 2px solid #fff;
 }
@@ -1303,6 +1301,9 @@ form label {
 
 .js .animate-box {
   opacity: 0;
+}
+.page .img{
+  float: left;
 }
 
 /*# sourceMappingURL=style.css.map */
