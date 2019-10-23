@@ -15,6 +15,10 @@ router.get("/register", function(req,res, next)
 router.get("/LogIn", function (req, res, next) {
   res.render("LogIn")
 });
+router.get("/viewOne",function(req,res,next)
+{
+  res.render("viewOne")
+})
 
 
 router.get("/exchangeorsell", function (req, res, next) {
