@@ -31,10 +31,13 @@ router.get("/exchange", function (req, res, next) {
 })
 
 router.get("/exchangeorbuy", function (req, res, next) {
-  res.render("ExchangeorBuy")
+  Sellbooks.find().exec((err, Sell) => {
+  res.render("exchangeorbuy",{Sell})
+  })
+
 });
 router.get("/sell", function (req, res, next) {
-  res.render("Sell")
+res.render("Sell")
 });
 
 router.post("/exchange", function (req, res, next) {
