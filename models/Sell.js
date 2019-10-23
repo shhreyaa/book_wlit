@@ -6,6 +6,7 @@ const SellSchema = mongoose.Schema({
     genre: String,
     description: String,
     price: Number,
+   // image: File,
 
     createdDate: {
         type: Date,

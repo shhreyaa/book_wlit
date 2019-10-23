@@ -63,7 +63,7 @@
                             <li class="active"><a href="/">Home</a></li>
                             <li><a href="/register"> Register </a></li>
                             <li class="has-dropdown">
-                                <a href="">Buy / Exchange books </a>
+                                <a href="/exchangeorbuy">Buy / Exchange books </a>
 
                             </li>
                             <li class="has-dropdown">
@@ -76,10 +76,24 @@
                     </div>
                 </div>
 
-                
+
             </div>
         </nav>
 
+        <div class=''>
+            <p>Name:<br><%= Sell.name %></p>
+            <p>Description:<br><%= Sell.description %></p>
+            <p>cast:<br><%= Sell.author %></p>
+            <p>Genre:<br><%= Sell.genre  %></p>
+            <p>Genre:<br><%= Sell.price %></p>
+            <!-- <a href='/update/<%= movie._id %>'>
+                <input type='button' value='Edit'>
+            </a>
+            <a href='/deleteview1/<%= movie._id %>'>
+                <input type='button' value='Delete'>
+            </a> -->
+        
+        </div>
         </div>
       </body>
       </html>
