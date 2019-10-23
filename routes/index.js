@@ -68,4 +68,16 @@ router.post("/sell", function (req, res, next) {
   })
 });
 
+router.get('/viewOne/:_id', function (req, res, next) {
+  Exchanges.findById({ _id: req.params._id }).then((exchange) =>//function(err,movie)
+  {
+    console.log('movie selected', exchange);
+    res.render('viewOne', {exchange});
+  })
+    .catch((err) => {
+      res.render('error');
+    })
+
+});
+
 module.exports = router;
