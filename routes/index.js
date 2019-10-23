@@ -32,13 +32,19 @@ router.get("/exchange", function (req, res, next) {
 
 router.get("/exchangeorbuy", function (req, res, next) {
   Sellbooks.find().exec((err, Sell) => {
-  res.render("exchangeorbuy",{Sell})
-  })
-  Exchanges.find().exec((err, exchange) => {
-    res.render("exchangeorbuy", { exchange })
-  })
+    Exchanges.find().exec((err, Exchange) => {
+      res.render("ExchangeorBuy", { Exchange , Sell})
 
+    })
+    })
+  
+ 
 });
+
+
+
+
+
 router.get("/sell", function (req, res, next) {
 res.render("Sell")
 });
@@ -57,6 +63,7 @@ router.post("/exchange", function (req, res, next) {
     res.redirect('/exchangeorbuy')
   })
 });
+
 
 router.post("/sell", function (req, res, next) {
   console.log(req.body)
