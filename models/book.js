@@ -1,16 +1,29 @@
-var mongoose = require('mongoose')
-const BookSchema = mongoose.Schema({
-      name: String,
-      author: String,
-      genre: String,
-      description: String,
-      genre : String,
-      price: Number,
+// var mongoose = require('mongoose')
 
-      createdDate: {
-          type: Date,
-          default: Date.now
-      }
+// const SellSchema = mongoose.Schema({
+//       name: String,
+//       author: String,
+//       genre: String,
+//       description: String,
+//       price: Number,
+      
+//       createdDate: {
+//           type: Date,
+//           default: Date.now
+//       }
 
-});
-mondule.exports = mongoose.model('Books', MovieSchema)
+// });
+// const ExchangeSchema = mongoose.Schema({
+//     name: String,
+//     author: String,
+//     genre: String,
+//     description: String,
+    
+//     createdDate: {
+//         type: Date,
+//         default: Date.now
+//     }
+
+// });
+// module.exports = mongoose.model('Sell', SellSchema)
+// module.exports = mongoose.model('Exchange', ExchangeSchema)

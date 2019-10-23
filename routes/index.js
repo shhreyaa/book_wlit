@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var Books = require('../models/book');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -17,12 +18,16 @@ router.get("/LogIn", function (req, res, next) {
 });
 
 
-router.get("/exchangeorsell", function (req, res, next) {
-  res.render("ExchangeorSell", {})
+router.get("/exchange", function (req, res, next) {
+  res.render("Exchange")
+})
+
+router.get("/exchangeorbuy", function (req, res, next) {
+  res.render("ExchangeorBuy")
 });
-
-
-
+router.get("/sell", function (req, res, next) {
+  res.render("Sell")
+});
 
 
 
