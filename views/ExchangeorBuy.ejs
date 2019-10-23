@@ -70,7 +70,7 @@
                             <li class="active"><a href="/">Home</a></li>
                             <li><a href="/register"> Register </a></li>
                             <li class="has-dropdown">
-                                <a href="">Buy / Exchange books </a>
+                                <a href="/exchangeorbuy">Buy / Exchange books </a>
 
                             </li>
                             <li class="has-dropdown">
@@ -102,6 +102,23 @@
 
                
             </ul>
+        </div>
+        div class="exchange">
+        <h1> Books for sell </h1>
+        <ul>
+            <% Exchange.forEach(function(exchange){ %>
+            <li>
+                <span>
+                    <a href='/exchange/<%=exchange._id %>'> <%= exchange.name %></a><br>
+        
+                </span>
+        
+            </li>
+            <% }) %>
+        
+        
+        
+        </ul>
         </div>
         <div class="gototop js-top">
             <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
