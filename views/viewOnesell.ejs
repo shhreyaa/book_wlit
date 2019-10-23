@@ -5,14 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Greatness &mdash; Free Website Template, Free HTML5 Template by FreeHTML5.co</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
-    <meta name="keywords"
-        content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-    <meta name="author" content="FreeHTML5.co" />
-
-
+    <title> Kitablover &mdash; </title>
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
@@ -29,28 +22,28 @@
         type='text/css'>
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="stylesheets/animate.css">
+    <link rel="stylesheet" href="/animate.css">
     <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="stylesheets/icomoon.css">
+    <link rel="stylesheet" href="/stylesheets/icomoon.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
 
     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="stylesheets/magnific-popup.css">
+    <link rel="stylesheet" href="/stylesheets/magnific-popup.css">
 
     <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="stylesheets/owl.carousel.min.css">
-    <link rel="stylesheet" href="stylesheets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/stylesheets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/stylesheets/owl.theme.default.min.css">
 
     <!-- Theme style  -->
-    <link rel="stylesheet" href="stylesheets/styleRegister.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 
     <!-- Modernizr JS -->
-    <script src="/js/modernizr-2.6.2.min.js"></script>
+    <script src="javascript/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    	<script src="js/respond.min.js"></script>
+    	<![endif]-->
 
 </head>
 
@@ -63,7 +56,7 @@
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-xs-2">
-                        <div id="gtco-logo"><img src="/images/logo.png" width="80"><a href="/">Kitablover</a></div>
+                        <div id="gtco-logo"><a href="/">Kitablover</a></div>
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
@@ -74,57 +67,33 @@
 
                             </li>
                             <li class="has-dropdown">
-                                <a href="/sell">Sell books </a>
+                                <a href="/exchangeorsell">Sell books </a>
 
                             </li>
-                            <li><a href="/Exchange">Exchange books </a></li>
+                            <li><a href="/exchangeorsell">Exchange books </a></li>
                             <li><a href="/LogIn">Log In </a></li>
                         </ul>
                     </div>
                 </div>
 
+
             </div>
         </nav>
-       
-        <div class="overlay"></div>
-        <div class="gtco-container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center">
-                    <div class="display-t">
-                        <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                            <h3><br><br><br><br><br>Register</h3>
-            <h1> Books for sell </h1>
-            <ul>
-                <% Sell.forEach(function(sell){ %>
-                    <li>
-                        <span>
-                            <a href='/viewOnesell/<%= sell._id %>'> <%= sell.name %></a><br>
 
-                        </span>
-
-                    </li>
-                    <% }) %>
-
-
-               
-            </ul>
-        </div>
-        <div class="exchange">
-        <h1> Books for Exchange </h1>
-        <ul>
-            <% Exchange.forEach(function(exchange){ %>
-            <li>
-                <span>
-                    <a href='viewOne/exchange/<%=exchange._id %>'> <%= exchange.name %></a><br>
+        <div class="overlay">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="display-t">
+                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                                <h3><br><br><br><br><br><br><br>Register</h3>
+            <p>Name:<br><%= Sell.name %></p>
+            <p>Description:<br><%= Sell.description %></p>
+            <p>cast:<br><%= Sell.author %></p>
+            <p>Genre:<br><%= Sell.genre  %></p>
+            <p>Genre:<br><%= Sell.price %></p>
+          
         
-                </span>
-        
-            </li>
-            <% }) %>
-        
-        
-        
-        </ul>
             </div>
             </div>
             </div>

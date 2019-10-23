@@ -20,10 +20,10 @@ router.get("/LogIn", function (req, res, next) {
   res.render("LogIn")
 });
 
-router.get("/viewOne",function(req,res,next)
-{
-  res.render("viewOne")
-})
+// router.get("/viewOne",function(req,res,next)
+// {
+//   res.render("viewOne")
+// })
 
 
 router.get("/exchange", function (req, res, next) {
@@ -81,12 +81,12 @@ router.post("/sell", function (req, res, next) {
   })
 });
 
-router.get('/viewOne/sell/:_id', function (req, res, next) {
+router.get('/viewOnesell/:_id', function (req, res, next) {
   Sellbooks.findById({ _id: req.params._id }).then((Sell) =>//function(err,movie)
   {
-    console.log('movie selected', Sell);
+    console.log('book selected', Sell);
 
-    res.render('viewOne', {Sell});
+    res.render('viewOnesell', {Sell});
   })
     .catch((err) => {
       res.render('error');
@@ -94,12 +94,12 @@ router.get('/viewOne/sell/:_id', function (req, res, next) {
 
 });
 
-router.get('/viewOne/exchange/:_id', function (req, res, next) {
+router.get('/viewOneexchange/:_id', function (req, res, next) {
   Exchanges.findById({ _id: req.params._id }).then((exchange) =>//function(err,movie)
   {
-    console.log('movie selected', exchange);
+    console.log('book selected', exchange);
 
-    res.render('viewOne', { exchange });
+    res.render('viewOneexchange', {exchange});
   })
     .catch((err) => {
       res.render('error');
