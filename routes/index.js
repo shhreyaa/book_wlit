@@ -107,4 +107,51 @@ router.get('/viewOneexchange/:_id', function (req, res, next) {
 
 });
 
+router.get('/deleteviewOnesell/:_id', function (req, res, next) {
+  Sellbooks.deleteOne({ _id: req.params._id }).then((sell) =>//function(err,movie)
+  {
+    
+    res.redirect('/exchangeorbuy');
+
+  })
+    .catch((err) => {
+      res.render('error')
+    })
+});
+
+router.get('/deleteviewOneexchange/:_id', function (req, res, next) {
+  Exchanges.deleteOne({ _id: req.params._id }).then((exchange) =>//function(err,movie)
+  {
+    
+    res.redirect('/exchangeorbuy');
+
+  })
+    .catch((err) => {
+      res.render('error')
+    })
+});
+router.get('/updateviewOneexchange/:_id', function (req, res, next) {
+  Exchanges.findOne({ _id: req.params._id }).then((exchange) =>//function(err,movie)
+  {
+    
+    res.render('updateoneexchange', { exchange });
+
+  })
+    .catch((err) => {
+      res.render('error')
+    })
+});
+
+router.get('/updateviewOnesell/:_id', function (req, res, next) {
+  Sellbooks.findOne({ _id: req.params._id }).then((sell) =>//function(err,movie)
+  {
+  
+    res.render('updateonesell', {sell});
+
+  })
+    .catch((err) => {
+      res.render('error')
+    })
+});
+
 module.exports = router;

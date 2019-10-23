@@ -91,6 +91,21 @@
                                 <p>Description:<br><%= exchange.description %></p>
                                 <p>cast:<br><%= exchange.author %></p>
                                 <p>Genre:<br><%= exchange.genre  %></p>
+
+                                
+                                    <div class="form-group">
+                                        <a href="/updateviewOneexchange/<%= exchange._id %>">
+                                        <input type="submit" value="Edit" class="btn btn-primary">
+                                        </a>
+                                    </div>
+                                
+                                
+                                    <div class="form-group">
+                                        <a href="/deleteviewOneexchange/<%= exchange._id %>">
+                                        <input type="submit" value="Delete" class="btn btn-primary">
+                                        </a>
+                                    </div>
+                                
                                 
                             </div>
                         </div>
