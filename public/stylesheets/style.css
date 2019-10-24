@@ -1305,5 +1305,11 @@ form label {
 .page .img{
   float: left;
 }
-
+.homepageTitle {
+    margin-left: 187px;
+    margin-top: 8px;
+}
+.pinkDivision{
+  background-color: #fde2e8;
+}
 /*# sourceMappingURL=style.css.map */
