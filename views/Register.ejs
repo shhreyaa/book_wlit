@@ -1,144 +1,157 @@
 <!DOCTYPE HTML>
-    
-    <html>
-    
-    <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title> Bookstop &mdash; </title>
-    
-      <!-- Facebook and Twitter integration -->
-      <meta property="og:title" content="" />
-      <meta property="og:image" content="" />
-      <meta property="og:url" content="" />
-      <meta property="og:site_name" content="" />
-      <meta property="og:description" content="" />
-      <meta name="twitter:title" content="" />
-      <meta name="twitter:image" content="" />
-      <meta name="twitter:url" content="" />
-      <meta name="twitter:card" content="" />
-    
-      <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet'
+
+<html>
+
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDN8DHA0nClZFWgDfhApj-5lnDNgknliu4",
+            authDomain: "bookwlit.firebaseapp.com",
+            databaseURL: "https://bookwlit.firebaseio.com",
+            projectId: "bookwlit",
+            storageBucket: "bookwlit.appspot.com",
+            messagingSenderId: "208840715195",
+            appId: "1:208840715195:web:1aaee8b421bf6a1949b29e",
+            measurementId: "G-MW6QY7K6J6"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Kitablover &mdash; </title>
+
+    <!-- Facebook and Twitter integration -->
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet'
         type='text/css'>
-    
-      <!-- Animate.css -->
-      <link rel="stylesheet" href="/animate.css">
-      <!-- Icomoon Icon Fonts-->
-      <link rel="stylesheet" href="/stylesheets/icomoon.css">
-      <!-- Bootstrap  -->
-      <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-    
-      <!-- Magnific Popup -->
-      <link rel="stylesheet" href="/stylesheets/magnific-popup.css">
-    
-      <!-- Owl Carousel  -->
-      <link rel="stylesheet" href="/stylesheets/owl.carousel.min.css">
-      <link rel="stylesheet" href="/stylesheets/owl.theme.default.min.css">
-    
-      <!-- Theme style  -->
-      <link rel="stylesheet" href="/stylesheets/styleRegister.css">
-    
-      <!-- Modernizr JS -->
-      <script src="javascript/modernizr-2.6.2.min.js"></script>
-      <!-- FOR IE9 below -->
-      <!--[if lt IE 9]>
+
+    <!-- Animate.css -->
+    <!---- <link rel="stylesheet" href="/animate.css"> -->
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="/stylesheets/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="/stylesheets/magnific-popup.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="/stylesheets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/stylesheets/owl.theme.default.min.css">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="/stylesheets/styleRegister.css">
+
+    <!-- Modernizr JS -->
+    <!--<script src="javascript/modernizr-2.6.2.min.js"></script>-->
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
     	<script src="js/respond.min.js"></script>
     	<![endif]-->
-    
-    </head>
-    
-    <body background="/images/bookregiter.png">
-    
-      <div class="gtco-loader"></div>
-    
-      <div id="page">
+
+</head>
+
+<body background="/images/bookregiter.png">
+
+    <div class="gtco-loader"></div>
+
+    <div id="page">
         <nav class="gtco-nav" role="navigation">
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-xs-2">
-                        <div id="gtco-logo"><a href="/">Bookstop</a></div>
+                        <div id="gtco-logo"><img src="/images/logo.png" width="80"><a href="/">Kitablover</a></div>
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
                             <li class="active"><a href="/">Home</a></li>
-                            <li><a href="/register"> Register </a></li>
+                            <li><a href="/register"> Register/LogIn </a></li>
                             <li class="has-dropdown">
                                 <a href="/exchangeorbuy">Buy / Exchange books </a>
-        
+
                             </li>
                             <li class="has-dropdown">
                                 <a href="/sell">Sell books </a>
-        
+
                             </li>
                             <li><a href="/exchange">Exchange books </a></li>
-                            <li><a href="/LogIn">Log In </a></li>
+
                         </ul>
                     </div>
                 </div>
-        
+
             </div>
         </nav>
-        
-        
-            <div class="overlay">
+
+
+        <div class="overlay">
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <div class="display-t">
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                                <h1><br><br><br>Register</h1>
-                                <h3><img src="/images/logo.png" width="80"></h3>
-                              
-                                        <form action="#">
-                                            <div class="row form-group">
-                                                <div class="col-md-6">
-                                                    <label for="fname">First Name</label>
-                                                    <input type="text" id="fname" class="form-control" placeholder="Your firstname" name='Firstname'>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <label for="lname">Last Name</label>
-                                                    <input type="text" id="lname" class="form-control" placeholder="Your lastname" name='Lastname'>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="row form-group">
-                                                <div class="col-md-12">
-                                                    <label for="email">Email</label>
-                                                    <input type="text" id="email" class="form-control" placeholder="Your email address" name='email'>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="row form-group">
-                                                <div class="col-md-12">
-                                                    <label for="subject">Password</label>
-                                                    <input type="password" id="Password" class="form-control" placeholder="Password" name='password'>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="row form-group">
-                                                <div class="col-md-12">
-                                                    <label for="message">Confirm password</label>
-                                                    <input type="password" id="ConfirmPassword" class="form-control" placeholder="Password" name='Confirmpassword'>
-                                                </div>
-                                            </div>
-                                            <div class="row form-group">
-                                                <div class="col-md-12">
-                                                    <label for="message">Upload Image</label>
-                                                    <input type="file" name="picture" accept="image/*">
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="submit" value="Register" class="btn btn-primary">
-                                            </div>
-                                        
-                                        </form>
+                                <h3><br><br><br><br><br><br><br>Register</h3>
+
+                                <form action="#">
+
+
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label for="email">Email</label>
+                                            <input type="text" id="emailid" class="form-control"
+                                                placeholder="Your email address" name='email'></input>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label for="subject">Password</label>
+                                            <input type="password" id="password12" class="form-control"
+                                                placeholder="Password" name='password'></input>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <button id="btnRegister" value="Register"
+                                            class="btn btn-primary">Register</button>
+                                        <button id="btnLogIn" value="LogIn" class="btn btn-primary">LogIn</button>
+                                        <button id="btnLogOut" class="btn btn-action hide">LogOut </button>
+                                    </div>
+
+
+                                </form>
+                                <button onclick="signInWithGoogle()">Sign in with google!</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
 
     </div>
@@ -146,6 +159,57 @@
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
+    <script>
+
+        function signInWithGoogle() {
+            var googleAuthProvider = new firebase.auth.GoogleAuthProvider()
+            firebase.auth().signInWithPopup(googleAuthProvider)
+
+                .then(function (data) {
+                    console.log(data)
+                })
+                .catch(function (error) {
+                    console.log(error)
+                })
+        }
+
+        const txtemail = document.getElementById("emailid");
+        const txtpassword = document.getElementById("password12");
+        const btnRegister = document.getElementById("btnRegister");
+        const btnLogIn = document.getElementById("btnLogIn");
+        const btnLogOut = document.getElementById("btnLogOut");
+
+        btnLogIn.addEventListener('click', e => {
+            const email = txtemail.value
+            const password = txtpassword.value
+            const auth = firebase.auth();
+            const promise = auth.signInWithEmailAndPassword(email, password);
+            promise.catch(e => console.log(e.message))
+
+        });
+        btnRegister.addEventListener('click', e => {
+            const email = txtemail.value
+            const password = txtpassword.value
+            // const auth=firebase.auth();
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+                .catch(e => console.log(e.message))
+
+        });
+        btnLogOut.addEventListener('click', e => {
+            firebase.auth().signOut();
+        });
+
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if (firebaseUser) {
+                console.log(firebaseUser)
+                btnLogOut.classList.remove('hide');
+            }
+            else {
+                console.log('Not logged in')
+                btnLogOut.classList.add('hide');
+            }
+        })
+    </script>
 
     <!-- jQuery -->
     <script src="/js/jquery.min.js"></script>

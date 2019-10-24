@@ -1312,4 +1312,14 @@ form label {
 .pinkDivision{
   background-color: #fde2e8;
 }
+.exchange{
+  float:right;
+   width: 80%;
+   background-color: #46b8da;
+}
+.sell{
+  float:left;
+  width: 50%;
+  
+}
 /*# sourceMappingURL=style.css.map */
