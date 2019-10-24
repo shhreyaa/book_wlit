@@ -151,4 +151,28 @@ router.get('/deleteOnesell/:_id', function (req, res, next) {
       res.render('error')
     })
 });
+
+router.post('/updateOneexchange', function (req, res, next) {
+  Exchanges.findOneAndUpdate({ _id: req.body._id }, { $set: req.body }).then((exchange) =>//function(err,movie)
+  {
+    
+    res.redirect('/exchangeorbuy');
+
+  })
+    .catch((err) => {
+      res.render('error')
+    })
+});;
+
+router.post('/updateOnesell', function (req, res, next) {
+  Sellbooks.findOneAndUpdate({ _id: req.body._id }, { $set: req.body }).then((sell) =>//function(err,movie)
+  {
+    
+    res.redirect('/exchangeorbuy');
+
+  })
+    .catch((err) => {
+      res.render('error')
+    })
+});
 module.exports = router;
