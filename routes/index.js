@@ -56,7 +56,8 @@ router.post("/exchange", function (req, res, next) {
       name: req.body.name,
       author: req.body.author,
       description: req.body.description,
-      genre: req.body.genre
+      genre: req.body.genre,
+      photo: req.body.photo
     })
   var promise = exchange.save()
   promise.then((exchange) => {
@@ -73,7 +74,8 @@ router.post("/sell", function (req, res, next) {
       author: req.body.author,
       description: req.body.description,
       genre: req.body.genre,
-      price : req.body.price
+      price : req.body.price,
+      photo : req.body.photo
     })
   var promise = sell.save()
   promise.then((sell) => {
@@ -105,53 +107,6 @@ router.get('/viewOneexchange/:_id', function (req, res, next) {
       res.render('error');
     })
 
-});
-
-router.get('/deleteviewOnesell/:_id', function (req, res, next) {
-  Sellbooks.deleteOne({ _id: req.params._id }).then((sell) =>//function(err,movie)
-  {
-    
-    res.redirect('/exchangeorbuy');
-
-  })
-    .catch((err) => {
-      res.render('error')
-    })
-});
-
-router.get('/deleteviewOneexchange/:_id', function (req, res, next) {
-  Exchanges.deleteOne({ _id: req.params._id }).then((exchange) =>//function(err,movie)
-  {
-    
-    res.redirect('/exchangeorbuy');
-
-  })
-    .catch((err) => {
-      res.render('error')
-    })
-});
-router.get('/updateviewOneexchange/:_id', function (req, res, next) {
-  Exchanges.findOne({ _id: req.params._id }).then((exchange) =>//function(err,movie)
-  {
-    
-    res.render('updateoneexchange', { exchange });
-
-  })
-    .catch((err) => {
-      res.render('error')
-    })
-});
-
-router.get('/updateviewOnesell/:_id', function (req, res, next) {
-  Sellbooks.findOne({ _id: req.params._id }).then((sell) =>//function(err,movie)
-  {
-  
-    res.render('updateonesell', {sell});
-
-  })
-    .catch((err) => {
-      res.render('error')
-    })
 });
 
 module.exports = router;
