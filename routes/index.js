@@ -29,14 +29,13 @@ router.get("/exchange", function (req, res, next) {
 })
 
 router.get("/exchangeorbuy", function (req, res, next) {
+
   Sellbooks.find().exec((err, Sell) => {
     Exchanges.find().exec((err, Exchange) => {
       res.render("ExchangeorBuy", { Exchange , Sell})
 
     })
     })
-  
- 
 });
 
 

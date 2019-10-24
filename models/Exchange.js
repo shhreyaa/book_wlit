@@ -1,6 +1,7 @@
 var mongoose = require('mongoose')
 const ExchangeSchema = mongoose.Schema(
-    {
+    {   username: String,
+        contact:String,
         name: String,
         author: String,
         genre: String, 

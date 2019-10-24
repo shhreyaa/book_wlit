@@ -1,6 +1,8 @@
 var mongoose = require('mongoose')
 
 const SellSchema = mongoose.Schema({
+    username: String,
+    contact: String,
     name: String,
     author: String,
     genre: String,
