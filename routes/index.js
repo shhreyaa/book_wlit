@@ -133,7 +133,7 @@ router.get('/updateOnesell/:_id', function (req, res, next) {
 router.get('/deleteOneexchange/:_id', function (req, res, next) {
   Exchanges.deleteOne({ _id: req.params._id }).then((exchange) =>//function(err,movie)
   {
-    c
+    
     res.redirect('/exchangeorbuy');
 
   })
