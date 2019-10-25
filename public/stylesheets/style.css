@@ -15,7 +15,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #828282;
+  color: black;
   background:WHITE;
 }
 
@@ -1313,8 +1313,15 @@ form label {
   background-color: #fde2e8;
   margin: 0 0 0 0 ;
 }
-.forExchange{
 
-margin: 30 30 30 30 ;
+p:hover, h1:hover, h2:hover  {
+  background-color:rgb(182, 130, 182);
+  transform:scale(1.6);
+}
+img:hover {
+transform:scale(1.6);
+}
+.border{
+  background-color;: plum;
 }
 /*# sourceMappingURL=style.css.map */

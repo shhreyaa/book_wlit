@@ -5,7 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongooose = require('mongoose');
 var firebase = require('firebase');//added
-
+// var mutler = require('mutler'); //for mutler
+// //set storage engine
+// const storage = mutler.diskStorage({
+//   destination: './public/uploads'
+// });
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');

@@ -86,11 +86,12 @@
                     <div class="col-md-8 col-md-offset-2 text-justify">
                         <div class="display-t">
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                                <div class="forExchange"
+                                <div class="forExchange">
                                 <br><br><br><br><br><br><br><h1>Exchange Books</h1>
-                                <h2><b><%= exchange.name %></b></h2>
+                                <h2><b><div="border"><%= exchange.name %></div></b></h2>
                                 <div id="bookphoto">
-                                    <img src=<%= exchange.photo %> alt="book image"></div>
+                                    <!-- <img src=images/<%= exchange.photo %> alt="book image"></div> -->
+                                   <img src="/images/milk.jpg" style= "width: 250px;">
                                 <b>
                                 <p>Name:<br><%= exchange.name %></p>
                                 

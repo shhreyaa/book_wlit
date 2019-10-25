@@ -20,7 +20,7 @@ body {
   /* background-image: url('bookpattern.jpg'); */
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: bottom;
+  background-position: left;
 }
  
 }
@@ -70,7 +70,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, figure {
-  color: #000;
+  color: white;
   font-family: "Raleway", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
@@ -1329,10 +1329,9 @@ ol li{
     font-family :  Palatino;
     border : 1px solid ;
   /*   background-color : #FF7933; */
-    background-color: rgba(23,56,99,0.4);
+    background-color: rgba(243, 242, 243, 0.678);
     opacity: 0.9;
     margin : 8px 0;
-    
     transition : .5s;
     border-radius : 5px;
     text-transform: uppercase;
@@ -1341,14 +1340,14 @@ ol li{
 }
 ol li:hover{
   transform:scale(1.06);
-  background: #9976ca /*purple*/
+  background: rgb(172, 97, 197) /*purple*/
 }
 input, textarea{
     display : inline-block;
     width : 100%;
     padding : .5rem;
     font-size : 18px;
-    font-family : ;
+    /* font-family : ; */
     border-radius : 5px;
 }
 
@@ -1358,7 +1357,7 @@ input, textarea{
   font-family : Palatino;
   border-radius : 5px;
   border : 1;
-  background : #260455;
+  background :#F85A16;
   padding : .5rem;
   color : white;
   margin : 1rem 0;
@@ -1377,10 +1376,9 @@ background : #3375FF;
     
 }
 .sell{
-  background-color: #46b8da;
+  background-color:rgba(122, 98, 170, 0.6) 
 }
 .exchange{
-  background-color: rgba(140, 67, 182, 0.8);
-}
+ background-color: rgba(91, 59, 156, 0.7)
 
 /*# sourceMappingURL=style.css.map */

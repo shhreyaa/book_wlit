@@ -31,6 +31,7 @@ router.get("/exchange", function (req, res, next) {
 router.get("/exchangeorbuy", function (req, res, next) {
 
   Sellbooks.find().exec((err, Sell) => {
+   
     Exchanges.find().exec((err, Exchange) => {
       res.render("ExchangeorBuy", { Exchange , Sell})
 
@@ -152,20 +153,27 @@ router.get('/deleteOnesell/:_id', function (req, res, next) {
     })
 });
 
-router.post('/updateviewOneexchange/:_id', function (req, res, next) {
-  Exchanges.findOneAndUpdate({ _id: req.body._id }, { $set: req.body }).then((exchange) =>//function(err,movie)
-  {
-    
-    res.redirect('/exchangeorbuy');
+router.post('/updateviewOneexchange/', function (req, res, next) {
+  Exchanges.findOneAndUpdate({ name: req.body.name }, { $set: req.body }, function (err, book) {
+    console.log(book)
+    res.redirect('/exchangeorbuy')
+    //res.render("updateMovie", { movie })
+    // res.redirect("/viewMovies");
 
   })
-    .catch((err) => {
-      res.render('error')
-    })
+  // Exchanges.findOneAndUpdate({ _id: req.body._id }, { $set: req.body }).then((exchange) =>//function(err,movie)
+  // {
+  //  console.log 
+  //   res.redirect('/exchangeorbuy');
+
+  // })
+  //   .catch((err) => {
+  //     res.render('error')
+  //   })
 });;
 
-router.post('/updateviewOnesell/:_id', function (req, res, next) {
-  Sellbooks.findOneAndUpdate({ _id: req.body._id }, { $set: req.body }).then((sell) =>//function(err,movie)
+router.post('/updateviewOnesell/', function (req, res, next) {
+  Sellbooks.findOneAndUpdate({ name: req.body.name }, { $set: req.body }).then((sell) =>//function(err,movie)
   {
     
     res.redirect('/exchangeorbuy');
