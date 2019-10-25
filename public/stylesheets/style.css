@@ -1314,10 +1314,7 @@ form label {
   margin: 0 0 0 0 ;
 }
 
-p:hover, h1:hover, h2:hover  {
-  background-color:rgb(182, 130, 182);
-  transform:scale(1.6);
-}
+ 
 img:hover {
 transform:scale(1.6);
 }
