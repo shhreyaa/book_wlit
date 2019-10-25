@@ -47,7 +47,7 @@
 
 </head>
 
-<body>
+<body background="/images/bookregister">
 
     <div class="gtco-loader"></div>
 
@@ -86,10 +86,14 @@
                     <div class="col-md-8 col-md-offset-2 text-justify">
                         <div class="display-t">
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                                <h3><br><br><br><br><br><br><br>Register</h3>
-                                <p>Name:<br><%= exchange.name %></p>
+                                <div class="forExchange"
+                                <br><br><br><br><br><br><br><h1>Exchange Books</h1>
+                                <h2><b><%= exchange.name %></b></h2>
                                 <div id="bookphoto">
-                                    <img src="C:/Users/Shreya Basnet/Desktop/book_wlit/publicimages\<%= exchange.photo %>" alt="default book"></div>
+                                    <img src=<%= exchange.photo %> alt="book image"></div>
+                                <b>
+                                <p>Name:<br><%= exchange.name %></p>
+                                
                                 <p>Description:<br><%= exchange.description %></p>
                                 <p>cast:<br><%= exchange.author %></p>
                                 <p>Genre:<br><%= exchange.genre  %></p>
@@ -105,6 +109,7 @@
                                     <a href='/deleteOneexchange/<%= exchange._id %>'>
                                         <input type='button' value='Delete'>
                                     </a>
+                                    </div>
                                 </div>
                                 
                                 

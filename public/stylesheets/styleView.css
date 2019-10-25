@@ -1376,4 +1376,11 @@ background : #3375FF;
     background-color: rgba(0, 0, 0, 0.8);
     
 }
+.sell{
+  background-color: #46b8da;
+}
+.exchange{
+  background-color: rgba(140, 67, 182, 0.8);
+}
+
 /*# sourceMappingURL=style.css.map */

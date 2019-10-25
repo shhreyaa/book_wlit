@@ -6,6 +6,7 @@ var logger = require('morgan');
 var mongooose = require('mongoose');
 var firebase = require('firebase');//added
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
