@@ -152,7 +152,7 @@ router.get('/deleteOnesell/:_id', function (req, res, next) {
     })
 });
 
-router.post('/updateOneexchange', function (req, res, next) {
+router.post('/updateviewOneexchange/:_id', function (req, res, next) {
   Exchanges.findOneAndUpdate({ _id: req.body._id }, { $set: req.body }).then((exchange) =>//function(err,movie)
   {
     
@@ -164,7 +164,7 @@ router.post('/updateOneexchange', function (req, res, next) {
     })
 });;
 
-router.post('/updateOnesell', function (req, res, next) {
+router.post('/updateviewOnesell/:_id', function (req, res, next) {
   Sellbooks.findOneAndUpdate({ _id: req.body._id }, { $set: req.body }).then((sell) =>//function(err,movie)
   {
     
