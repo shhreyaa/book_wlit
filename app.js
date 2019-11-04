@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mongooose = require('mongoose');
+var mongoose = require('mongoose');
 var firebase = require('firebase');//added
 // var mutler = require('mutler'); //for mutler
 // //set storage engine
@@ -12,14 +12,20 @@ var firebase = require('firebase');//added
 // });
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var userRouter = require('./routes/user');
 
 var app = express();
-mongooose.connect('mongodb://localhost/kitablover')
-  .then(() => {
-    console.log('here..........')
-  })
 
+const uri= "mongodb+srv://dbBookLover:wlitproject@cluster0-ejncv.mongodb.net/test?retryWrites=true&w=majority";
+
+mongoose.connect(uri, {useNewUrlParser: true } ).then(
+  () => {
+    console.log("Database connection established!");
+  },
+  err => {
+    console.log("Error connecting Database instance due to: ", err);
+  }
+);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -31,7 +37,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use(userRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

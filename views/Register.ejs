@@ -4,32 +4,7 @@
 
 <head>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
-
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyDN8DHA0nClZFWgDfhApj-5lnDNgknliu4",
-            authDomain: "bookwlit.firebaseapp.com",
-            databaseURL: "https://bookwlit.firebaseio.com",
-            projectId: "bookwlit",
-            storageBucket: "bookwlit.appspot.com",
-            messagingSenderId: "208840715195",
-            appId: "1:208840715195:web:1aaee8b421bf6a1949b29e",
-            measurementId: "G-MW6QY7K6J6"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-
-
-    </script>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Bookstop&mdash; </title>
@@ -88,17 +63,8 @@
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
                             <li class="active"><a href="/">Home</a></li>
-                            <li><a href="/register"> Register </a></li>
-                            <li>
-                                <a href="/exchangeorbuy">Buy / Exchange books </a>
-
-                            </li>
-                            <li >
-                                <a href="/sell">Sell books </a>
-
-                            </li>
-                            <li><a href="/exchange">Exchange books </a></li>
-                            <li><a href="/login"> Login </a></li></li>
+                                <li><a href="/register"> Register </a></li>
+                               <li><a href="/LogIn">Log In </a></li>
 
                         </ul>
                     </div>
@@ -116,13 +82,17 @@
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
                                 <h3><br><br><br><br><br><br><br>Register</h3>
 
-                                <form action="#">
-
-
+                                <form  method='post' action="/users">
                                     <div class="row form-group">
                                         <div class="col-md-12">
+                                            <label for="name">Name</label>
+                                            <input type="text" id="name" class="form-control" placeholder="Your full name" name="name">
+                                        </div>
+                                    </div>
+                                     <div class="row form-group">
+                                        <div class="col-md-12">
                                             <label for="email">Email</label>
-                                            <input type="text" id="emailid" class="form-control"
+                                            <input type="text" id="email" class="form-control"
                                                 placeholder="Your email address" name='email'></input>
                                         </div>
                                     </div>
@@ -130,22 +100,22 @@
                                     <div class="row form-group">
                                         <div class="col-md-12">
                                             <label for="subject">Password</label>
-                                            <input type="password" id="password12" class="form-control"
+                                            <input type="password" id="password" class="form-control"
                                                 placeholder="Password" name='password'></input>
                                         </div>
                                     </div>
 
 
                                     <div class="form-group">
-                                        <button id="btnRegister" value="Register"
+                                        <button id="btnRegister" value="Register" type="submit"
                                             class="btn btn-primary">Register</button>
-                                        <button id="btnLogIn" value="LogIn" class="btn btn-primary">LogIn</button>
-                                        <button id="btnLogOut" class="btn btn-action hide">LogOut </button>
+                                        
+                                      
                                     </div>
 
 
                                 </form>
-                                <button onclick="signInWithGoogle()">Sign in with google!</button>
+                                
                             </div>
                         </div>
                     </div>
@@ -160,58 +130,9 @@
     <div class="gototop js-top">
         <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
     </div>
-    <script>
+   
 
-        function signInWithGoogle() {
-            var googleAuthProvider = new firebase.auth.GoogleAuthProvider()
-            firebase.auth().signInWithPopup(googleAuthProvider)
-
-                .then(function (data) {
-                    console.log(data)
-                })
-                .catch(function (error) {
-                    console.log(error)
-                })
-        }
-
-        const txtemail = document.getElementById("emailid");
-        const txtpassword = document.getElementById("password12");
-        const btnRegister = document.getElementById("btnRegister");
-        const btnLogIn = document.getElementById("btnLogIn");
-        const btnLogOut = document.getElementById("btnLogOut");
-
-        btnLogIn.addEventListener('click', e => {
-            const email = txtemail.value
-            const password = txtpassword.value
-            const auth = firebase.auth();
-            const promise = auth.signInWithEmailAndPassword(email, password);
-            promise.catch(e => console.log(e.message))
-
-        });
-        btnRegister.addEventListener('click', e => {
-            const email = txtemail.value
-            const password = txtpassword.value
-            // const auth=firebase.auth();
-            firebase.auth().createUserWithEmailAndPassword(email, password)
-                .catch(e => console.log(e.message))
-
-        });
-        btnLogOut.addEventListener('click', e => {
-            firebase.auth().signOut();
-        });
-
-        firebase.auth().onAuthStateChanged(firebaseUser => {
-            if (firebaseUser) {
-                console.log(firebaseUser)
-                btnLogOut.classList.remove('hide');
-            }
-            else {
-                console.log('Not logged in')
-                btnLogOut.classList.add('hide');
-            }
-        })
-    </script>
-
+       
     <!-- jQuery -->
     <script src="/js/jquery.min.js"></script>
     <!-- jQuery Easing -->

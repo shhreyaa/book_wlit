@@ -13,6 +13,10 @@ router.get("/register", function(req,res, next)
 {
   res.render("Register")
 });
+router.get("/profile", function(req,res, next)
+{
+  res.render("profile")
+});
 
 router.get("/LogIn", function (req, res, next) {
   res.render("LogIn")
