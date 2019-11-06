@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 var firebase = require('firebase');//added
-// var mutler = require('mutler'); //for mutler
+ var multer = require('multer'); //for mutler
 // //set storage engine
 // const storage = mutler.diskStorage({
 //   destination: './public/uploads'

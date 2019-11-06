@@ -60,7 +60,10 @@
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
-                            
+                                <li class="has-dropdown">
+                                        <a href="/home">Home</a>
+                                                
+                                                </li>  
                         <li class="has-dropdown">
                             <a href="/buy">Buy </a>
                             
@@ -71,6 +74,7 @@
                             </li>
                             <li><a href="/exchange">Exchange books </a></li>
                             <li><a href="/profile">Profile </a></li>
+                                
                         </ul>
                     </div>
                 </div>
@@ -86,7 +90,7 @@
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
                                 <h3><br><br><br><br><br><br><br> Sell details</h3>
 
-            <img src="/images/hunger.jpg">
+            <div id="userphoto"><img src="<%= Sell.photo %>" alt="default avatar"></div>
             <p>Name:<br><%= Sell.name %></p>
             <p>Description:<br><%= Sell.description %></p>
             <p>Author:<br><%= Sell.author %></p>
