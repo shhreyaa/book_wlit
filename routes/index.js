@@ -1,9 +1,47 @@
 var express = require('express');
+var mongoose = require("mongoose");
 var router = express.Router();
 var Exchanges = require('../models/Exchange');
 var Sellbooks = require('../models/Sell');
+const multer = require('multer');
+const upload = multer({ dest: './public/uploads/' });
+// const upload= multer({dest: 'upload/'});
+//store and validation
+// const multerConfig = {
+//   storage : multer.diskStorage({
+//     destination : function(req, file, next){
+//       next(null,'./public/images');
+//     },
+//      filename: function (req, file, next) {
+//         const ext = file.ninetype.split('/')[1];
+//         next(null,file.fieldname + '-' + Date.now()+ '.' + ext);
+//      }
+//   }),
+//  fileFilter: function(req, file, next){
+//    if(!file){
+//      next();
+//    }
+//    const image = file.minetype.startsWith('image/');
+//    if(image){
+//      next (null, true);
+//    } else {
+//      next({message:"File not supported"},false);
+//    }
+//  }
+// };
 
-
+//storage function
+// const storage = multer.diskStorage({
+//   destination: function(req, file, cb){
+//     cb(null,'./uploads');
+//   },
+//   filename: function(req,file,cb){
+//     cb(null,new Date().toISOString()+ file.orinalname);
+//   }
+// })
+// //
+// const uploads = multer({storage : storage })
+ 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -51,7 +89,7 @@ router.get("/sell", function (req, res, next) {
 res.render("Sell")
 });
 
-router.post("/exchange", function (req, res, next) {
+router.post("/exchange", upload.single('photo'),function (req, res, next) {
   console.log(req.body)
   var exchange = new Exchanges
     ({
@@ -59,32 +97,35 @@ router.post("/exchange", function (req, res, next) {
       author: req.body.author,
       description: req.body.description,
       genre: req.body.genre,
-      photo: req.body.photo
-    })
+      photo:  req.body.photo,
+
+    });
   var promise = exchange.save()
   promise.then((exchange) => {
     res.redirect('/exchangeorbuy')
-  })
-});
+  });
+})
 
 
-router.post("/sell", function (req, res, next) {
-  console.log(req.body)
+router.post("/sell",upload.single('photo'), function (req, res) {
+  console.log(req.body);
+  console.log(req.file);
   var sell = new Sellbooks
-    ({
+    ({ 
       name: req.body.name,
       author: req.body.author,
       description: req.body.description,
       genre: req.body.genre,
       price : req.body.price,
-      photo : req.body.photo
-    })
+      photo: "/uploads/" + req.body.photo,
+    });
   var promise = sell.save()
   promise.then((sell) => {
     res.redirect('/exchangeorbuy')
   })
 });
 
+// router.get('/viewOnesell/:_id',  multer(multerConfig).single("photo"),  function (req, res, next) {
 router.get('/viewOnesell/:_id', function (req, res, next) {
   Sellbooks.findById({ _id: req.params._id }).then((Sell) =>//function(err,movie)
   {
