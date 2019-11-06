@@ -61,12 +61,28 @@
                       </div>
                       <div class="col-xs-10 text-right menu-1">
                         <ul>
-                          <li class="active"><a href="/">Home</a></li>
-                          <li><a href="/register"> Register </a></li>
-                        
-                          <li><a href="/LogIn">Log In </a></li>
+                                <li class="has-dropdown">
+                                        <a href="/home">Home</a>
+                                                
+                                                </li>
+                                    <li class="has-dropdown">
+                                        <a href="/exchangeorbuy">Buy / Exchange books </a>
+                                                        
+                                       </li>
+                                       
+                                        <li class="has-dropdown">
+                                            <a href="/sell">Sell books </a>
+                                        
+                                        </li>
+                                        <li><a href="/exchange">Exchange books </a></li>
+                                        <li><a href="/profile">Profile </a></li>
                         </ul> <br>
-                      
+                        <form  method='post' action="/searchsell">
+                        <input id="searchbar" type="text" name="name" placeholder="Search books for sell">
+                        </form>
+                        <form  method='post' action="/searchexchange">
+                          <input id="searchbar" type="text" name="name" placeholder="Search books for exchange">
+                          </form>
                       </div>
                     </div>
                 
@@ -87,7 +103,7 @@
                     <p>
                       
     
-                      <a href="/register" class="btn btn-white btn-outline btn-lg">REGISTER NOW</a></p>
+              
                   </div>
                   </div>
                 </div>

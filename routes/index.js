@@ -3,11 +3,9 @@ var mongoose = require("mongoose");
 var router = express.Router();
 var Exchanges = require('../models/Exchange');
 var Sellbooks = require('../models/Sell');
-<<<<<<< HEAD
 var Search=require('../models/Search')
 
 
-=======
 const multer = require('multer');
 const upload = multer({ dest: './public/uploads/' });
 // const upload= multer({dest: 'upload/'});
@@ -47,10 +45,12 @@ const upload = multer({ dest: './public/uploads/' });
 // //
 // const uploads = multer({storage : storage })
  
->>>>>>> b6fdc2e72d5b315304ce98c5a9b6da7da513ba08
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
+});
+router.get('/home', function(req, res, next) {
+  res.render('home');
 });
 
 router.get("/register", function(req,res, next)
