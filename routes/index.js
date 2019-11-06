@@ -86,18 +86,20 @@ router.get("/buy", function (req, res, next) {
     
     })
 });
-router.get("/booksavailable", function (req, res, next) {
+// router.get("/booksavailable", function (req, res, next) {
 
-  Exchanges.findOne({ exchangegenre: req.body.exchangegenre }, { $set: req.body }, function (err, Exchange) {
-    console.log(Exchange)
-    res.redirect('/exchangeorbuy')
+//   Exchanges.aggregate(
+//     [
+//     {$match: req.exchangegenre }, function (err, Exchange) {
+//     console.log(Exchange)
+//     // res.redirect('/Exchangebooks')
    
   
-      res.render("Exchangebooks", {Exchange})
+//       res.render("Exchangebooks", {Exchange})
 
     
-    })
-});
+//     })
+// });
 
 
 
