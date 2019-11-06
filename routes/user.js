@@ -14,7 +14,7 @@ router.post('/users', function(req, res){
      
         promise.then((user) => {
             console.log('User saved',user)
-            res.redirect("/exchangeorbuy");
+            res.redirect("/home");
           
              })
       
@@ -33,7 +33,7 @@ router.post('/users/login', async(req, res) =>{
         const { email, password } = req.body
         const user = await User.findByCredentials(email, password)
         if(user){
-            res.redirect("/exchangeorbuy")
+            res.redirect("/home")
         }
         if (!user) {
             return res.status(401).send({error: 'Login failed! Check authentication credentials'})
