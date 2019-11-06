@@ -7,6 +7,8 @@ const ExchangeSchema = mongoose.Schema(
         genre: String, 
         description: String,
         photo: String,
+        available: String,
+        exchangegenre:String,
          createdDate: {
               type: Date,
                default: Date.now

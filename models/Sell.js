@@ -8,7 +8,8 @@ const SellSchema = mongoose.Schema({
     genre: String,
     description: String,
     price: Number,
-    photo:String,
+    available: String,
+    photo: {type: String},
 
     createdDate: {
         type: Date,

@@ -82,14 +82,18 @@
                        </li>
                        
                         <li class="has-dropdown">
-                            <a href="/sell">Sell books </a>
-                        
-                        </li>
-                        <li><a href="/exchange">Exchange books </a></li>
-                        <li><a href="/profile">Log Out </a></li>
-                </ul>
-            </div>
-        </div>
+                            <a href="/buy">Buy </a>
+                            
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="/sell">Sell books </a>
+                            
+                            </li>
+                            <li><a href="/exchange">Exchange books </a></li>
+                            <li><a href="/profile">Profile </a></li>
+                        </ul>
+                    </div>
+                </div>
 
             </div>
         </nav>
@@ -114,7 +118,7 @@
                                         </div>
                                         <div class="col-md-6">
                                             <label for="bname">Contact</label>
-                                            <input type="text" id="contact" class="form-control" placeholder="Contact" name='conatct'>
+                                            <input type="text" id="contact" class="form-control" placeholder="Contact" name='contact'>
                                         </div>
                                     </div>
                                     Book Details
@@ -135,9 +139,19 @@
                                     <div class="row form-group">
                                         <div class="col-md-12">
                                             <label for="subject">Genre</label>
-                                            <input type="text" id="Description" class="form-control" placeholder="Genre"
-                                                name='genre'>
+                                            <select name='genre'>
+                                                <option>Fantasy</option>
+                                                <option>Horror</option>
+                                                <option>Romance</option>
+                                                <option>Tragedy</option>
+                                                <option>Action</option>
+                                                <option>Adventure</option>
+                                                <option>Epic</option>
+                                                <option>Comedy-drama</option>
+                                                <option>Non-Fiction</option>
+                                            </select>
                                         </div>
+                                        
                                     </div>
                                     <div class="row form-group">
                                         <div class="col-md-12">
@@ -152,12 +166,17 @@
                                         <input type="text" id="price" class="form-control" placeholder="price" name='price'>
                                     </div>
                                     </div>
-                                    <form >
-                                    <div class="form-group">
-                                        <label for="photo">Select your photo</label>
-                                        <input type="file" class="form-control-file" id="photo" name="photo">
-                                    </div>
-                                    
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <label for="subject">Availability</label>
+                                            <select name='available'>
+                                                <option>Available</option>
+                                                <option>Not Available</option>
+                                               
+                                            </select>
+                                        </div>
+                                     </div>
+
 
                                     <div class="form-group">
                                         <input type="submit" value="photo" class="btn btn-primary">
