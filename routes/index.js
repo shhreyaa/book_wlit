@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Exchanges = require('../models/Exchange');
 var Sellbooks = require('../models/Sell');
+var Search=require('../models/Search')
 
 
 /* GET home page. */
@@ -186,5 +187,42 @@ router.post('/updateviewOnesell/', function (req, res, next) {
     .catch((err) => {
       res.render('error')
     })
+});
+
+router.post("/searchsell", function (req, res, next) {
+ 
+  name=req.body.name
+Sellbooks.findOne({name})
+.then((Sell) =>
+{
+  console.log('book selected', Sell);
+
+  res.render('viewOnesell', {Sell});
+})
+.catch((err) => {
+  res.render('error')
+});
+ 
+
+
+ 
+});
+router.post("/searchexchange", function (req, res, next) {
+ 
+  name=req.body.name
+Exchanges.findOne({name}).then((exchange) =>//function(err,movie)
+{
+  res.render('viewOneexchange', {exchange});
+  
+
+})
+
+.catch((err) => {
+  res.render('error')
+})
+ 
+
+
+ 
 });
 module.exports = router;
