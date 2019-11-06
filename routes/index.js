@@ -29,17 +29,29 @@ router.get("/LogIn", function (req, res, next) {
 
 
 router.get("/exchange", function (req, res, next) {
-  res.render("Exchange")
+  res.render("ExchangeForm")
 })
 
-router.get("/exchangeorbuy", function (req, res, next) {
+router.get("/buy", function (req, res, next) {
 
   Sellbooks.find().exec((err, Sell) => {
    
-    Exchanges.find().exec((err, Exchange) => {
-      res.render("ExchangeorBuy", { Exchange , Sell})
+  
+      res.render("Buy", {Sell})
 
+    
     })
+});
+router.get("/booksavailable", function (req, res, next) {
+
+  Exchanges.findOne({ exchangegenre: req.body.exchangegenre }, { $set: req.body }, function (err, Exchange) {
+    console.log(Exchange)
+    res.redirect('/exchangeorbuy')
+   
+  
+      res.render("Exchangebooks", {Exchange})
+
+    
     })
 });
 
@@ -55,15 +67,19 @@ router.post("/exchange", function (req, res, next) {
   console.log(req.body)
   var exchange = new Exchanges
     ({
+      username:req.body.username,
+      contact:req.body.contact,
       name: req.body.name,
       author: req.body.author,
       description: req.body.description,
       genre: req.body.genre,
+      available:req.body.available,
       photo: req.body.photo
+      
     })
   var promise = exchange.save()
   promise.then((exchange) => {
-    res.redirect('/exchangeorbuy')
+    res.redirect('/booksavailable')
   })
 });
 
@@ -72,16 +88,19 @@ router.post("/sell", function (req, res, next) {
   console.log(req.body)
   var sell = new Sellbooks
     ({
+      username:req.body.username,
+      contact:req.body.contact,
       name: req.body.name,
       author: req.body.author,
       description: req.body.description,
       genre: req.body.genre,
       price : req.body.price,
+      available:req.body.available,
       photo : req.body.photo
     })
   var promise = sell.save()
   promise.then((sell) => {
-    res.redirect('/exchangeorbuy')
+    res.redirect('/buy')
   })
 });
 
@@ -138,7 +157,7 @@ router.get('/deleteOneexchange/:_id', function (req, res, next) {
   Exchanges.deleteOne({ _id: req.params._id }).then((exchange) =>//function(err,movie)
   {
     
-    res.redirect('/exchangeorbuy');
+    res.redirect('/booksavailable');
 
   })
     .catch((err) => {
@@ -149,7 +168,7 @@ router.get('/deleteOnesell/:_id', function (req, res, next) {
   Sellbooks.deleteOne({ _id: req.params._id }).then((sell) =>//function(err,movie)
   {
     
-    res.redirect('/exchangeorbuy');
+    res.redirect('/buy');
 
   })
     .catch((err) => {
@@ -180,7 +199,7 @@ router.post('/updateviewOnesell/', function (req, res, next) {
   Sellbooks.findOneAndUpdate({ name: req.body.name }, { $set: req.body }).then((sell) =>//function(err,movie)
   {
     
-    res.redirect('/exchangeorbuy');
+    res.redirect('/buy');
 
   })
     .catch((err) => {
