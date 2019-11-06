@@ -6,10 +6,11 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 var firebase = require('firebase');//added
  var multer = require('multer'); //for mutler
-// //set storage engine
+// /set storage engine
 // const storage = mutler.diskStorage({
 //   destination: './public/uploads'
 // });
+
 
 var indexRouter = require('./routes/index');
 var userRouter = require('./routes/user');
@@ -38,6 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use(userRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
