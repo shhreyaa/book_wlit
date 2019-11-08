@@ -3,47 +3,23 @@ var mongoose = require("mongoose");
 var router = express.Router();
 var Exchanges = require('../models/Exchange');
 var Sellbooks = require('../models/Sell');
-var Search=require('../models/Search')
+var Search=require('../models/Search');
+var path = require('path');
+var multer = require('multer');
+
+var Storage= multer.diskStorage({
+  destination:"./public/uploads/",
+  filename:(req,file,cb)=>{
+    cb(null,file.fieldname+"_"+Date.now()+path.extname(file.originalname));
+  }
+});
+
+var upload = multer({
+  storage:Storage
+}).single('file');
 
 
-const multer = require('multer');
-const upload = multer({ dest: './public/uploads/' });
-// const upload= multer({dest: 'upload/'});
-//store and validation
-// const multerConfig = {
-//   storage : multer.diskStorage({
-//     destination : function(req, file, next){
-//       next(null,'./public/images');
-//     },
-//      filename: function (req, file, next) {
-//         const ext = file.ninetype.split('/')[1];
-//         next(null,file.fieldname + '-' + Date.now()+ '.' + ext);
-//      }
-//   }),
-//  fileFilter: function(req, file, next){
-//    if(!file){
-//      next();
-//    }
-//    const image = file.minetype.startsWith('image/');
-//    if(image){
-//      next (null, true);
-//    } else {
-//      next({message:"File not supported"},false);
-//    }
-//  }
-// };
 
-//storage function
-// const storage = multer.diskStorage({
-//   destination: function(req, file, cb){
-//     cb(null,'./uploads');
-//   },
-//   filename: function(req,file,cb){
-//     cb(null,new Date().toISOString()+ file.orinalname);
-//   }
-// })
-// //
-// const uploads = multer({storage : storage })
  
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -109,7 +85,7 @@ router.get("/sell", function (req, res, next) {
 res.render("Sell")
 });
 
-router.post("/exchange", upload.single('photo'),function (req, res, next) {
+router.post("/exchange", function (req, res, next) {
   console.log(req.body)
   var exchange = new Exchanges
     ({
@@ -130,9 +106,10 @@ router.post("/exchange", upload.single('photo'),function (req, res, next) {
 });
 
 
-router.post("/sell",upload.single('photo'), function (req, res) {
+router.post("/sell",upload, function (req, res,next) {
   console.log(req.body);
   console.log(req.file);
+  var imageFile=req.file.filename;
   var sell = new Sellbooks
     ({
       username:req.body.username,
@@ -143,7 +120,7 @@ router.post("/sell",upload.single('photo'), function (req, res) {
       genre: req.body.genre,
       price : req.body.price,
       available:req.body.available,
-      photo : req.body.photo
+      imagename:imageFile
     })
   var promise = sell.save()
   promise.then((sell) => {

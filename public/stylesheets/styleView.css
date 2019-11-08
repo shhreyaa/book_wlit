@@ -23,7 +23,7 @@ body {
   background-position: left;
 }
  
-}
+
 
 #page {
   position: relative;
@@ -254,7 +254,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .text{
     
-        align: centre;
+       
         align-content: centre;
         background-color: rgba(0,0,0,0.8);
         width: 400em;
@@ -294,7 +294,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 9.5em;
   left: 11.5em;
   right: 11.5em;
-  background: rgba(0, 0, 0, 0.2); //foroverlay
+  background: rgba(0, 0, 0, 0.2); 
 }
 .gtco-cover > .gtco-container {
   position: relative;
@@ -386,7 +386,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   top: .05em;
   font-family: 'icomoon';
-  speak: none;
+  
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -691,7 +691,7 @@ form label {
   border-radius: 4px;
 }
 .gtco-tabs .gtco-tab-nav li {
-  float: left;
+ 
   margin: 0;
   padding: 0;
   width: 25%;
@@ -925,7 +925,7 @@ form label {
   position: absolute;
   right: 0px;
   font-family: 'icomoon';
-  speak: none;
+  
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1364,10 +1364,9 @@ input, textarea{
   width : auto;
   cursor : pointer;
   float: right;
-  &:hover{
-background : #3375FF;
-  }
+
 }
+
 .forbg{
     background-image: url("bookpattern.jpg");
 }
@@ -1379,6 +1378,7 @@ background : #3375FF;
   background-color:rgba(122, 98, 170, 0.6) 
 }
 .exchange{
- background-color: rgba(91, 59, 156, 0.7)
+ background-color: rgba(91, 59, 156, 0.7);
+}
 
 /*# sourceMappingURL=style.css.map */
