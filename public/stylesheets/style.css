@@ -1318,6 +1318,15 @@ form label {
 img:hover {
 transform:scale(1.6);
 }
+
+image {
+
+width: 50px;
+height:50px;
+margin-left:180px;
+margin-right:180px
+
+}
 .border{
   background-color;: plum;
 }

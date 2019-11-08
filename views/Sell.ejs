@@ -108,7 +108,7 @@
                                 
                                 <h1><br><br><br>Sell</h1>
                                 <h3><img src="/images/logo.png" width="80"></h3>
-                                <form action="/sell" method="POST">
+                                <form action="/sell" method="POST" enctype="multipart/form-data">
                                     User Details:
                                     <div class="row form-group">
                                     
@@ -176,11 +176,18 @@
                                             </select>
                                         </div>
                                      </div>
+                                    
+                                     <div class="form-group">
+                                        <label for="imagename">Select your photo</label>
+                                        <input type="file" class="form-control-file" id="photo" name="file">
+                                    </div>
+                                
 
 
                                     <div class="form-group">
-                                        <input type="submit" value="photo" class="btn btn-primary">
+                                        <input type="submit" value="Sell"  class="btn btn-primary">
                                     </div>
+                                
 
                              
                             </div>

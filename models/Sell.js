@@ -9,8 +9,7 @@ const SellSchema = mongoose.Schema({
     description: String,
     price: Number,
     available: String,
-    photo: {type: String},
-
+    imagename: String,
     createdDate: {
         type: Date,
         default: Date.now
