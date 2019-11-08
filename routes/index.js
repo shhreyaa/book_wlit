@@ -125,7 +125,7 @@ router.post("/exchange", upload.single('photo'),function (req, res, next) {
     })
   var promise = exchange.save()
   promise.then((exchange) => {
-    res.redirect('/booksavailable')
+    res.redirect('/Exchangebooks')
   })
 });
 
