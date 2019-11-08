@@ -54,10 +54,20 @@ router.get("/exchange", function (req, res, next) {
 
 router.get("/buy", function (req, res, next) {
   Sellbooks.find().exec((err, Sell) => {
-    Exchanges.find().exec((err, Exchange) => {
-      res.render("buy", { Exchange , Sell})
+   
+      res.render("buy", { Sell})
 
+    
     })
+  
+ 
+});
+router.get("/Exchangebooks", function (req, res, next) {
+  Exchanges.find().exec((err, Exchange) => {
+   
+      res.render("Exchangebooks", { Exchange})
+
+    
     })
   
  
@@ -103,7 +113,7 @@ router.post("/exchange",upload, function (req, res, next) {
     })
   var promise = exchange.save()
   promise.then((exchange) => {
-    res.redirect('/buy')
+    res.redirect('/Exchangebooks')
   })
 });
 
