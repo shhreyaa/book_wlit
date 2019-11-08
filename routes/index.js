@@ -53,14 +53,14 @@ router.get("/exchange", function (req, res, next) {
 })
 
 router.get("/buy", function (req, res, next) {
-
   Sellbooks.find().exec((err, Sell) => {
-   
-  
-      res.render("Buy", {Sell})
+    Exchanges.find().exec((err, Exchange) => {
+      res.render("buy", { Exchange , Sell})
 
-    
     })
+    })
+  
+ 
 });
 // router.get("/booksavailable", function (req, res, next) {
 
@@ -85,8 +85,9 @@ router.get("/sell", function (req, res, next) {
 res.render("Sell")
 });
 
-router.post("/exchange", function (req, res, next) {
+router.post("/exchange",upload, function (req, res, next) {
   console.log(req.body)
+  var imageFile=req.file.filename;
   var exchange = new Exchanges
     ({
       username:req.body.username,
@@ -96,12 +97,13 @@ router.post("/exchange", function (req, res, next) {
       description: req.body.description,
       genre: req.body.genre,
       available:req.body.available,
-      photo: req.body.photo
+      photo: req.body.photo,
+      imagename:imageFile
       
     })
   var promise = exchange.save()
   promise.then((exchange) => {
-    res.redirect('/booksavailable')
+    res.redirect('/buy')
   })
 });
 
