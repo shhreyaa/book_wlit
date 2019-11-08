@@ -71,12 +71,12 @@
 <div class="fs-split">
 
 	<!-- Image Side -->
-	<div class="split-image">
+	<!-- <div class="split-image">
         <img src="/uploads/<%= Sell.imagename %>" alt="image">
-	</div>
+	</div> -->
 
 	<!-- Content Side -->
-	<div class="split-content">
+	<!-- <div class="split-content">
 
 		<div class="split-content-vertically-center">
 		
@@ -105,6 +105,23 @@
 
 	</div>
 
+</div> -->
+<div class="split left">
+    <div class="centered">
+        <img src="/uploads/<%= Sell.imagename %>" alt="image">
+
+    </div>
+</div>
+
+<div class="split right">
+    <div class="centered">
+        <h1>Author:<%= Sell.author %></h1>
+        <h1>Genre:<%= Sell.genre %></h1>
+        <h1>Price:<%= Sell.price %></h1>
+        <h1> description:</h1>
+        <%= Sell.description %>
+
+    </div>
 </div>
 
 </body>
