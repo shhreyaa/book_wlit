@@ -77,11 +77,17 @@
                                   <li><a href="/Exchangebooks">Exchange books </a></li>
                                   <li><a href="/profile">Log Out</a></li>
                   </ul> <br>
-                
+                <form method='post' action="/searchsell">
+                    <input id="searchbar" type="text" name="name" placeholder="Search books for sell">
+                </form>
+                <form method='post' action="/searchexchange">
+                    <input id="searchbar" type="text" name="name" placeholder="Search books for exchange">
+                </form>
                 </div>
               </div>
           
             </div>
+            
           </nav>
          
         <div class="testover" >
@@ -90,7 +96,7 @@
                         
                             <br><br><br><br><br><br><br><br>
             <div class="over">
-            <div class="col-sm-6 sell" style="align-content: center;">
+            <div class="col-sm-6 sell" style=" align-content: center;">
             <h1> <b>Books for sell </h1>
             <ol>
                 <% Sell.forEach(function(sell){ %>
