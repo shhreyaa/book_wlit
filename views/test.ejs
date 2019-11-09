@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+   
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="stylesheets/bootstrap2.css">
+    <link rel="stylesheet" href="stylesheets/themify-icons.css">
+    <link rel="stylesheet" href="stylesheets/flaticon.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="stylesheets/style2.css">
+    <link rel="stylesheet" href="stylesheets/responsive.css">
+</head>
+<body>
+
+     <!--================ Start header Top Area =================-->
+ 
+    <!--================ End header top Area =================-->
+
+    <!-- Start header Menu Area -->
+    
+    <!-- End header MEnu Area -->
+
+    <!--================Fullwidth block Area =================-->
+
+
+    <!--================Home Banner Area =================-->
+    
+    <!--================End Home Banner Area =================-->
+
+    <!--================Category  Area Start =================-->
+    <% Sell.forEach(function(sell){ %>
+    <section class="category-page area-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="single-category">
+                        <div class="thumb">
+                                
+                        </div>
+                        <div class="short_details">
+                            <div class="meta-top d-flex">
+                                    <a href='/viewOnesell/<%= sell._id %>'> <%= sell.name %></a>
+                                    <a href='/viewOnesell/<%= sell._id %>'><img src="/uploads/<%= sell.imagename %>">
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                
+        </div>
+    </section>
+    <% }) %>
+    <!--================Category  Area End =================-->
+
+   <!-- ================ Instargram Area Starts ================= -->  
+

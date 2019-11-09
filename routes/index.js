@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var router = express.Router();
 var Exchanges = require('../models/Exchange');
 var Sellbooks = require('../models/Sell');
-var Search=require('../models/Search');
+
 var path = require('path');
 var multer = require('multer');
 
@@ -27,6 +27,9 @@ router.get('/', function(req, res, next) {
 });
 router.get('/home', function(req, res, next) {
   res.render('home');
+});
+router.get('/test', function(req, res, next) {
+  res.render('test');
 });
 
 router.get("/register", function(req,res, next)
@@ -108,6 +111,7 @@ router.post("/exchange",upload, function (req, res, next) {
       genre: req.body.genre,
       available:req.body.available,
       photo: req.body.photo,
+      exchangegenre:req.body.exchangegenre,
       imagename:imageFile
       
     })
