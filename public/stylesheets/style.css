@@ -1344,16 +1344,17 @@ margin-right:180px
 .split {
   height: 100%;
   width: 50%;
-  position: fixed;
+  position: absolute;
   
   top: 0;
   
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
 /* Control the left side */
 .left {
-  left: 0;
+  left: 10;
+ 
   background-color: lightcoral;
 }
 
@@ -1361,7 +1362,7 @@ margin-right:180px
 .right {
   right: 0;
   margin-top: 10%;
-  margin-right: 5%;
+  margin-right: 8%;
   background-color:pink
 }
 
@@ -1376,7 +1377,7 @@ margin-right:180px
 
 /* Style the image inside the centered container, if needed */
 .centered img {
-  margin-top: 120%;
+  margin-top: 100%;
   width: 300px;
   height: 500px;
 
