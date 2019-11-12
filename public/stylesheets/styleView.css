@@ -60,7 +60,7 @@ a {
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #ffff;
+  color:orangered;
   outline: none;
   text-decoration: none;
 }
@@ -70,7 +70,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, figure {
-  color: white;
+  color:rgba(122, 98, 170) ;
   font-family: "Raleway", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
@@ -185,7 +185,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-bottom-color: #fff;
+  border-bottom-color: rgba(122, 98, 170);
   border-width: 8px;
   margin-left: -8px;
 }
@@ -1212,12 +1212,12 @@ form label {
 }
 .btn-danger.btn-outline:hover, .btn-danger.btn-outline:focus, .btn-danger.btn-outline:active {
   background: #d9534f;
-  color: #fff;
+  color:rgba(122, 98, 170);
 }
 
 .btn-white {
   background: #d9534f;
-  color: #fff;
+  color;;
   border: 2px solid #d9534f;
 }
 .btn-white:hover, .btn-white:focus, .btn-white:active {
@@ -1232,7 +1232,7 @@ form label {
 .btn-white.btn-outline:hover, .btn-white.btn-outline:focus, .btn-white.btn-outline:active {
   background: #F85A16;
   color: #000;
-  border: 2px solid #fff;
+  border: 2px solid rgba(122, 98, 170) ;
 }
 
 .btn-outline {
@@ -1268,7 +1268,7 @@ form label {
   padding-right: 50px;
 }
 .btn.with-arrow:hover i {
-  color: #fff;
+  color: rgba(122, 98, 170);
   right: 18px;
   visibility: visible;
   opacity: 1;
@@ -1303,7 +1303,7 @@ form label {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url(../images/loader.gif) center no-repeat #fff;
+  background: url(../images/loader.gif) center no-repeat  rgba(122, 98, 170);
 }
 
 .js .animate-box {
@@ -1338,9 +1338,13 @@ ol li{
     
   
 }
-ol li:hover{
+img:hover{
   transform:scale(1.06);
   background: rgb(172, 97, 197) /*purple*/
+ 
+}
+ol {
+  display: inline-block;
 }
 input, textarea{
     display : inline-block;
@@ -1359,7 +1363,7 @@ input, textarea{
   border : 1;
   background :#F85A16;
   padding : .5rem;
-  color : white;
+  color:rgba(122, 98, 170) 
   margin : 1rem 0;
   width : auto;
   cursor : pointer;
@@ -1380,8 +1384,8 @@ input, textarea{
 .exchange{
  background-color: rgba(91, 59, 156, 0.7);
 }
+//add
 /*# test for product */
-
 
 
 /*# sourceMappingURL=style.css.map */

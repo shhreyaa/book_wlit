@@ -110,23 +110,26 @@
             </div>
         </div>
         <div class="over">
-            <div class="col-sm-6 sell" style="align-content: center;">
-            <h1> <b>Books for Exchange </h1>
-            <ol>
-                <% Exchange.forEach(function(exchange){ %>
-                    <li>
-                        <span>
-                            <a href='/viewOneexchange/<%= exchange._id %>'> <%= exchange.name %></a><br>
-                            <a href='/viewOneexchange/<%= exchange._id %>'><img src="/uploads/<%= exchange.imagename %>" alt="image" class="imagelist"></a>
-                        </span>
-                    </li>
-                    <% }) %>
-
-
-               
-            </ol>
+            <h1> books for change</h1>
+    <% Exchange.forEach(function(exchange){ %>
+    <div class="row row-pb-md">
+        <div class="col-md-4 animate-box" data-animate-effect="fadeIn">
+            <div class="gtco-staff">
+    
+    
+    
+    
+                <a href='/viewOneexchange/<%= exchange._id %>'> <%= exchange.name %></a><br>
+                <a href='/viewOneexchange/<%= exchange._id %>'><img src="/uploads/<%= exchange.imagename %>" alt="image"
+                        class="imagelist" width=200%></a><br>
+                price: <a href='/viewOneexchange/<%= exchange._id %>'> <%= exchange.price %></a><br>
+    
+    
+    
+    
             </div>
         </div>
+        <% }) %>
         
         
         
