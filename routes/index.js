@@ -3,9 +3,10 @@ var mongoose = require("mongoose");
 var router = express.Router();
 var Exchanges = require('../models/Exchange');
 var Sellbooks = require('../models/Sell');
-
+var User= require('../models/User');
 var path = require('path');
 var multer = require('multer');
+
 
 var Storage= multer.diskStorage({
   destination:"./public/uploads/",
@@ -112,7 +113,9 @@ router.post("/exchange",upload, function (req, res, next) {
       available:req.body.available,
       photo: req.body.photo,
       exchangegenre:req.body.exchangegenre,
-      imagename:imageFile
+      imagename:imageFile,
+
+      
       
     })
   var promise = exchange.save()
@@ -129,6 +132,7 @@ router.post("/sell",upload, function (req, res,next) {
   var sell = new Sellbooks
     ({
       username:req.body.username,
+      useremail:User.email,
       contact:req.body.contact,
       name: req.body.name,
       author: req.body.author,

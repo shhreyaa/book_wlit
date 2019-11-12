@@ -247,7 +247,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .text{
     
-        align: centre;
+        
         align-content: centre;
         background-color: rgba(0,0,0,0.8);
         width: 400em;
@@ -287,7 +287,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0); //for overlay
+  background: rgba(0, 0, 0, 0);
 }
 .gtco-cover > .gtco-container {
   position: relative;
@@ -379,7 +379,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   top: .05em;
   font-family: 'icomoon';
-  speak: none;
+ 
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -684,7 +684,7 @@ form label {
   border-radius: 4px;
 }
 .gtco-tabs .gtco-tab-nav li {
-  float: left;
+  /* float: left; */
   margin: 0;
   padding: 0;
   width: 25%;
@@ -918,7 +918,7 @@ form label {
   position: absolute;
   right: 0px;
   font-family: 'icomoon';
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

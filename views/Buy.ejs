@@ -92,14 +92,14 @@
          
         <div class="testover" >
         <div class="col-md-8 col-md-offset-2 text-center">
-                    <div class="display-t">
-                        
-                            <br><br><br><br><br><br><br><br>
-            <div class="over">
-            <div class="col-sm-6 sell" style=" align-content: center;">
-            <h1> <b>Books for sell </h1>
-            <ol>
-                <% Sell.forEach(function(sell){ %>
+        <div class="display-t">
+            <br><br><br><br><br><br><br><br>        
+            <% Sell.forEach(function(sell){ %>
+                             
+                            <h1> <b>Books for sell </h1>
+        <div class="over">
+            <div class="col-sm-6 sell" >
+                <ol>
                     <li>
                         <span>
                             <a href='/viewOnesell/<%= sell._id %>'> <%= sell.name %></a><br>
@@ -107,19 +107,16 @@
                         </span>
 
                     </li>
-                    <% }) %>
-
-
-               
-            </ol>
+                </ol>
             </div>
         </div>
+        <% }) %>
        
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
             
             
             </div>
