@@ -5,7 +5,14 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> Bookstop &mdash; </title>
+    <title>Bookstop &mdash;</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+    <meta name="keywords"
+        content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="FreeHTML5.co" />
+
+
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
@@ -18,38 +25,37 @@
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
 
-    <link href="https://fonts.google.com/specimen/Abril+Fatface" rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet'
+        type='text/css'>
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="/animate.css">
+    <link rel="stylesheet" href="stylesheets/animate.css">
     <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="/stylesheets/icomoon.css">
+    <link rel="stylesheet" href="stylesheets/icomoon.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
 
     <!-- Magnific Popup -->
-    <link rel="stylesheet" href="/stylesheets/magnific-popup.css">
+    <link rel="stylesheet" href="stylesheets/magnific-popup.css">
 
     <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="/stylesheets/owl.carousel.min.css">
-    <link rel="stylesheet" href="/stylesheets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="stylesheets/owl.carousel.min.css">
+    <link rel="stylesheet" href="stylesheets/owl.theme.default.min.css">
 
     <!-- Theme style  -->
-    <link rel="stylesheet" href="/stylesheets/styleView.css">
+    <link rel="stylesheet" href="stylesheets/styleView.css">
 
     <!-- Modernizr JS -->
-    <script src="javascript/modernizr-2.6.2.min.js"></script>
+    <script src="/js/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
-    	<script src="js/respond.min.js"></script>
-    	<![endif]-->
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
 
 </head>
 
-<body>
+<body background="/images/bookpattern.jpg">
 
-   
-<body>
     <div class="gtco-loader"></div>
 
     <div id="page">
@@ -84,106 +90,87 @@
                         <form method='post' action="/searchexchange">
                             <input id="searchbar" type="text" name="name" placeholder="Search books for exchange">
                         </form>
+
                     </div>
                 </div>
 
             </div>
-
         </nav>
 
-        <div class="gtco-loader"></div>
 
-        <div id="page">
-            <nav class="gtco-nav" role="navigation">
-                <div class="gtco-container">
-                    <div class="row">
-                        <div class="col-xs-2">
-                            <div id="gtco-logo"><a href="index.html">Greatness.</a></div>
-                        </div>
-                        <div class="col-xs-10 text-right menu-1">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li class="active"><a href="about.html">About</a></li>
-                                <li class="has-dropdown">
-                                    <a href="services.html">Services</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Web Design</a></li>
-                                        <li><a href="#">eCommerce</a></li>
-                                        <li><a href="#">Branding</a></li>
-                                        <li><a href="#">API</a></li>
-                                    </ul>
-                                </li>
-                                <li class="has-dropdown">
-                                    <a href="#">Dropdown</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">HTML5</a></li>
-                                        <li><a href="#">CSS3</a></li>
-                                        <li><a href="#">Sass</a></li>
-                                        <li><a href="#">jQuery</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
+
+        <div class="testover">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t">
+
+                    <br><br><br><br><br><br><br><br>
+                    <div class="over">
+                        <div class="col-sm-6 sell" style="align-content: center;">
+
                         </div>
                     </div>
 
-                </div>
-            </nav>
+                    <h1> BOOKS FOR SELL</h1>
+                    <div class="exchange">
+                        <% Sell.forEach(function(sell){ %>
+
+                        <div class="row row-pb-md">
+                            <div class="col-md-4 animate-box" data-animate-effect="fadeIn">
+                                <div class="gtco-staff">
+                                    <div class="fortext">
+                                        <h3> <a href='/viewOneexchange/<%= sell._id %>'>
+                                                <%= sell.name %></a><br>
+                                        </h3>
+                                    </div>
+                                    <div class="forPicture">
+
+                                        <a href='/viewOneexchange/<%= sell._id %>'><img
+                                                src="/uploads/<%= sell.imagename %>" alt="image" class="imagelist"
+                                                width=200%></a><br>
+                                    </div>
+                                <div class="forprice">
+                                    <h3> <a href='/viewOneexchange/<%= sell._id %>'>
+                                    PRICE:      <%= sell.price %></a><br>
+                                    </h3>
+                                </div>
 
 
 
 
-        </div>
-        <div id="gtco-team" class="gtco-section">
-            <div class="gtco-container">
-                <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-                        
-                    </div>
-                </div>
-                <BR><br>
-                <h2><b>BOOKS FOR SELL</b></h2>
-                <% Sell.forEach(function(sell){ %>
-                <div class="row row-pb-md">
-                    <div class="col-md-4 animate-box" data-animate-effect="fadeIn">
-                        <div class="gtco-staff">
-                      <h2>  <a href='/viewOnesell/<%= sell._id %>'> <%= sell.name %></a><br><br><br.
-                     <a href='/viewOnesell/<%= sell._id %>'><img src="/uploads/<%= sell.imagename %>" alt="image"
-                     class="imagelist" width=200%></a><br><br>
-                    price: <a href='/viewOnesell/<%= sell._id %>'> <%= sell.price %></a>
+                                </div>
+                            </div>
+                            <% }) %>
 
-                                    
-                  
-                      </h2>   
+
+
+
+
+
+
                         </div>
-                    </div>
-                    <% }) %>
-                  
 
+                        <div class="gototop js-top">
+                            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+                        </div>
 
+                        <!-- jQuery -->
+                        <script src="/js/jquery.min.js"></script>
+                        <!-- jQuery Easing -->
+                        <script src="/js/jquery.easing.1.3.js"></script>
+                        <!-- Bootstrap -->
+                        <script src="/js/bootstrap.min.js"></script>
+                        <!-- Waypoints -->
+                        <script src="/js/jquery.waypoints.min.js"></script>
+                        <!-- Carousel -->
+                        <script src="/js/owl.carousel.min.js"></script>
+                        <!-- countTo -->
+                        <script src="/js/jquery.countTo.js"></script>
+                        <!-- Magnific Popup -->
+                        <script src="/js/jquery.magnific-popup.min.js"></script>
+                        <script src="/js/magnific-popup-options.js"></script>
+                        <!-- Main -->
+                        <script src="/js/main.js"></script>
 
-        <div class="gototop js-top">
-            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-        </div>
-            
-            <!-- jQuery -->
-            <script src="/js/jquery.min.js"></script>
-            <!-- jQuery Easing -->
-            <script src="/js/jquery.easing.1.3.js"></script>
-            <!-- Bootstrap -->
-            <script src="/js/bootstrap.min.js"></script>
-            <!-- Waypoints -->
-            <script src="/js/jquery.waypoints.min.js"></script>
-            <!-- Carousel -->
-            <script src="/js/owl.carousel.min.js"></script>
-            <!-- countTo -->
-            <script src="/js/jquery.countTo.js"></script>
-            <!-- Magnific Popup -->
-            <script src="/js/jquery.magnific-popup.min.js"></script>
-            <script src="/js/magnific-popup-options.js"></script>
-            <!-- Main -->
-            <script src="/js/main.js"></script>
-            
-            </body>
-            
-            </html>
+</body>
+
+</html>
