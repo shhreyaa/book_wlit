@@ -6,6 +6,16 @@ var Sellbooks = require('../models/Sell');
 var User= require('../models/User');
 var path = require('path');
 var multer = require('multer');
+var nodemailer = require('nodemailer');
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'bookstop.wlit@gmail.com',
+    pass: 'book@123'
+  }
+});
+
 
 
 var Storage= multer.diskStorage({
@@ -27,11 +37,13 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 router.get('/home', function(req, res, next) {
+  
+ 
   res.render('home');
+ 
 });
-router.get('/test', function(req, res, next) {
-  res.render('test');
-});
+
+
 
 router.get("/register", function(req,res, next)
 {
@@ -66,6 +78,7 @@ router.get("/buy", function (req, res, next) {
   
  
 });
+
 router.get("/Exchangebooks", function (req, res, next) {
   Exchanges.find().exec((err, Exchange) => {
    
@@ -92,7 +105,23 @@ router.get("/Exchangebooks", function (req, res, next) {
 // });
 
 
-
+router.post('/confirmbuy', function(req, res, next) {
+  var mailOptions = {
+    from: 'bookstop.wlit@gmail.com',
+    to:req.body.selleremail,
+    subject:"Buyer information",
+    text: "The buyer details: Name  :"+ req.body.username +" Contact "+req.body.contact+" Email: "+req.body.useremail,
+  };
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  } )
+  res.redirect("/buy")
+}
+);
 
 
 router.get("/sell", function (req, res, next) {
@@ -132,8 +161,8 @@ router.post("/sell",upload, function (req, res,next) {
   var sell = new Sellbooks
     ({
       username:req.body.username,
-      useremail:User.email,
       contact:req.body.contact,
+      useremail:req.body.useremail,
       name: req.body.name,
       author: req.body.author,
       description: req.body.description,
@@ -142,6 +171,9 @@ router.post("/sell",upload, function (req, res,next) {
       available:req.body.available,
       imagename:imageFile
     })
+    var mailOptions={
+     
+    }
   var promise = sell.save()
   promise.then((sell) => {
     res.redirect('/buy')
@@ -155,10 +187,13 @@ router.get('/viewOnesell/:_id', function (req, res, next) {
     console.log('book selected', Sell);
 
     res.render('viewOnesell', {Sell});
+    
   })
     .catch((err) => {
       res.render('error');
     })
+ 
+    
 
 });
 
@@ -260,7 +295,7 @@ Sellbooks.findOne({name})
 {
   console.log('book selected', Sell);
 
-  res.render('viewOnesell', {Sell});
+   res.render('viewOnesell', {Sell});
 })
 .catch((err) => {
   res.render('error')
