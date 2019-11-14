@@ -9,6 +9,7 @@ const ExchangeSchema = mongoose.Schema(
         photo: String,
         available: String,
         exchangegenre:String,
+        condition: String,
         imagename: String,
          createdDate: {
               type: Date,

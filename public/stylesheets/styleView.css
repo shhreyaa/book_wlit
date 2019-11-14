@@ -1394,12 +1394,13 @@ input, textarea{
 .fortext{
   width: 90%;
   height: 100%;
-   padding-top:5px;
+  padding-top:5px;
   padding-right: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
   background-color: rgba(93, 56, 167);
   text-transform: uppercase;
+  position: relative;
 }
 .forPicture{
    width: 90%;
@@ -1424,6 +1425,7 @@ input, textarea{
 .sec: hover{
 transform:scale(1.08);
 }
+
 
 
 
