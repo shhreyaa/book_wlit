@@ -118,26 +118,22 @@
                             <div class="col-md-4 animate-box" data-animate-effect="fadeIn">
                                 <div class="gtco-staff">
                                     <div class="fortext">
-                                        <h3> <a href='/viewOneexchange/<%= sell._id %>'>
+                                        <h3> <a href='/viewOnesell/<%= sell._id %>'>
                                                 <%= sell.name %></a><br>
                                         </h3>
                                     </div>
                                     <div class="forPicture">
 
-                                        <a href='/viewOneexchange/<%= sell._id %>'><img
+                                        <a href='/viewOnesell/<%= sell._id %>'><img
                                                 src="/uploads/<%= sell.imagename %>" alt="image" class="imagelist"
                                                 width=200%></a><br>
                                     </div>
                                 <div class="forprice">
-                                    <h3> <a href='/viewOneexchange/<%= sell._id %>'>
+                                    <h3> <a href='/viewOnesell/<%= sell._id %>'>
                                     PRICE:      <%= sell.price %></a><br><br>
                                     </h3>
                                 </div>
-
-
-
-
-                                </div>
+                             </div>
                             </div>
                             <% }) %>
 

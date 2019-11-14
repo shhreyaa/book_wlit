@@ -122,14 +122,47 @@
 
 <div class="split right">
     <div class="centered">
+      
         <h1>Author:<%= Sell.author %></h1>
         <h1>Genre:<%= Sell.genre %></h1>
         <h1>Price:<%= Sell.price %></h1>
         <h1> Description:</h1>
         <%= Sell.description %>
+        <h4>Seller info:<%= Sell.username %></h4>
+        <h4>Seller contact:<%= Sell.contact %></h4>
+        <h4>Seller email: <%= Sell.useremail %></h4>
+       
+      <button  onclick="openForm()" class="btn btn-primary">Open Form</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/confirmbuy"  method="post" class="form-container">
+    <h5>An email will be sent to seller on confirmation</h5>
+
+    <input type="text" placeholder="Name" name="username" required>
+   <input type="text" placeholder="Contact no:" name="contact" required>
+    <input type="text" placeholder="Email" name="useremail" required>
+    <input type="hidden" name="selleremail" value="<%= Sell.useremail %>">
+    <button type="submit" class="btn">Confirm</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    
+  </form>
+</div>
+
+
 
     </div>
+    
 </div>
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
+  
 
 </body>
 
