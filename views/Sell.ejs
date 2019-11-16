@@ -63,37 +63,38 @@
     <div class="gtco-loader"></div>
 
     <div id="page">
-<nav class="gtco-nav" role="navigation">
-    <div class="gtco-container">
-        <div class="row">
-            <div class="col-xs-2">
-                <div id="gtco-logo"><a href="/">Bookstop</a></div>
-            </div>
-            <div class="col-xs-10 text-right menu-1">
-                <ul>
-                    
-                        <li class="has-dropdown">
-                        <a href="/home">Home</a>
-                                
-                                </li>
-                    
-                       
-                        <li class="has-dropdown">
-                            <a href="/buy">Buy </a>
-                            
-                            </li>
-                            <li class="has-dropdown">
-                                <a href="/sell">Sell books </a>
-                            
-                            </li>
-                            <li><a href="/exchange">Exchange books </a></li>
-                            <li><a href="/profile">Profile </a></li>
-                        </ul>
-                    </div>
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+              <div class="row">
+                <div class="col-xs-2">
+                  <div id="gtco-logo"><img src="/images/logo.png" width="80"><a href="/">Bookstop</a></div>
                 </div>
-
+                <div class="col-xs-10 text-right menu-1">
+                  <ul>
+                          <li class="has-dropdown">
+                                  <a href="/home">Home</a>
+                                          
+                                          </li>
+                              <li class="has-dropdown">
+                                  <a href="/buy">Buy</a>
+                                                  
+                                 </li>
+                                 
+                                  <li class="has-dropdown">
+                                      <a href="/sell">Sell books </a>
+                                  
+                                  </li>
+                                  <li><a href="/exchange">Exchange form </a></li>
+                                  <li><a href="/Exchangebooks">Exchange books </a></li>
+                                  <li><a href="/profile">Log Out</a></li>
+                  </ul> <br>
+                  
+                  
+                </div>
+              </div>
+          
             </div>
-        </nav>
+          </nav>
 
         
             <div class="overlay"></div>
@@ -105,7 +106,7 @@
                                 
                                 <h1><br><br><br>Sell</h1>
                                 <h3><img src="/images/logo.png" width="80"></h3>
-                                <form action="/sell" method="POST">
+                                <form action="/sell" method="POST" enctype="multipart/form-data">
                                     User Details:
                                     <div class="row form-group">
                                     
@@ -117,7 +118,13 @@
                                             <label for="bname">Contact</label>
                                             <input type="text" id="contact" class="form-control" placeholder="Contact" name='contact'>
                                         </div>
+                                        <div class="col-md-6">
+                                            <label for="bname">Email</label>
+                                            <input type="text" id="email" class="form-control" placeholder="Email" name='useremail'>
+                                        </div>
                                     </div>
+                                    
+                                </div>
                                     Book Details
                                     <div class="row form-group">
                                         <div class="col-md-6">
@@ -152,6 +159,16 @@
                                     </div>
                                     <div class="row form-group">
                                         <div class="col-md-12">
+                                            <label for="subject">Condition</label>
+                                            <select name='condition'>
+                                                <option>new</option>
+                                                <option>like new</option>
+                                                <option>old but in good condition</option>
+                                        </div>
+                                    
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
                                             <label for="subject">Description</label>
                                             <input type="text" id="Description" class="form-control"
                                                 placeholder="Description" name='description'>
@@ -173,13 +190,20 @@
                                             </select>
                                         </div>
                                      </div>
+                                    
+                                     <div class="form-group">
+                                        <label for="imagename">Select your photo</label>
+                                        <input type="file" class="form-control-file" id="photo" name="file">
+                                    </div>
+                                
 
 
                                     <div class="form-group">
-                                        <input type="submit" value="Sell" class="btn btn-primary">
+                                        <input type="submit" value="Sell"  class="btn btn-primary">
                                     </div>
+                                
 
-                                </form>
+                             
                             </div>
                         </div>
                     </div>

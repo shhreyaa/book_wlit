@@ -62,13 +62,18 @@ p {
   margin-bottom: 20px;
 }
 
-h1, h2, h3, h4, h5, h6, figure {
-  color: #000;
+h2, h3, h4, h5, h6, figure {
+  color:purple;
   font-family: "Raleway", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
 }
+h1:hover {
+  transform:scale(1.08);
+  background: salmon;
+  color: white; 
 
+}
 ::-webkit-selection {
   color: #F85A16;
   background: #F85A16;
@@ -247,7 +252,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .text{
     
-        align: centre;
+        
         align-content: centre;
         background-color: rgba(0,0,0,0.8);
         width: 400em;
@@ -287,7 +292,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0); //for overlay
+  background: rgba(0, 0, 0, 0);
 }
 .gtco-cover > .gtco-container {
   position: relative;
@@ -379,7 +384,7 @@ h1, h2, h3, h4, h5, h6, figure {
   left: 0;
   top: .05em;
   font-family: 'icomoon';
-  speak: none;
+ 
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -684,7 +689,7 @@ form label {
   border-radius: 4px;
 }
 .gtco-tabs .gtco-tab-nav li {
-  float: left;
+  /* float: left; */
   margin: 0;
   padding: 0;
   width: 25%;
@@ -918,7 +923,7 @@ form label {
   position: absolute;
   right: 0px;
   font-family: 'icomoon';
-  speak: none;
+  /* speak: none; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1316,9 +1321,149 @@ form label {
 
  
 img:hover {
-transform:scale(1.6);
+transform:scale(1.3);
 }
-.border{
+
+image {
+
+width: 50px;
+height:50px;
+margin-left:180px;
+margin-right:180px
+
+}
+/* imagelist {
+
+  width: 10%;
+  height:10%;
+  margin-left:180px;
+  margin-right:180px
+  
+  } */
+/* .border{
   background-color;: plum;
-}
+} */
 /*# sourceMappingURL=style.css.map */
+
+/* Split the screen in half */
+.split {
+  height: 130%;
+  width: 50%;
+  position: absolute;
+  
+  top: 0;
+  
+  /* padding-top: 20px; */
+}
+
+/* Control the left side */
+.left {
+  left: 10;
+ 
+  background-color: lightcoral;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  margin-top: 10%;
+  margin-right: 10%;
+  width: 50%;
+  background-color:pink;
+  text-align: right ;
+  color: purple;
+  
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  margin-top: 100%;
+  width: 300px;
+  height: 500px;
+
+  
+}
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.name1{
+  text-transform: uppercase;
+}
+.forTitle{
+  background: salmon;
+  text-transform: uppercase;
+  color: #fff;
+  
+}

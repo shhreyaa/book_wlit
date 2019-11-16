@@ -15,8 +15,9 @@ router.post('/users', function(req, res){
         promise.then((user) => {
             console.log('User saved',user)
             res.redirect("/home");
-          
-             })
+            
+           
+          })
       
     } 
   
@@ -33,8 +34,11 @@ router.post('/users/login', async(req, res) =>{
         const { email, password } = req.body
         const user = await User.findByCredentials(email, password)
         if(user){
-            res.redirect("/home")
-        }
+           
+            res.redirect("/home");
+            
+            
+         }
         if (!user) {
             return res.status(401).send({error: 'Login failed! Check authentication credentials'})
         }
@@ -46,12 +50,10 @@ router.post('/users/login', async(req, res) =>{
 
 })
 
-router.get('/users/me', auth, async(req, res) => {
-  // View logged in user profile
-  //res.send(req.user)
-  user=req.user
-  res.render('profile', { user });
 
+router.get('/users/me', auth, async(req, res) => {
+    // View logged in user profile
+    res.send(req.user)
 })
 
 router.post('/users/me/logout', auth, function(req, res) {
