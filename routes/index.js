@@ -87,19 +87,10 @@ router.get("/buy", function (req, res, next) {
     })
 });
 // router.get("/booksavailable", function (req, res, next) {
-
-//   Exchanges.aggregate(
-//     [
-//     {$match: req.exchangegenre }, function (err, Exchange) {
-//     console.log(Exchange)
-//     // res.redirect('/Exchangebooks')
-   
   
-//       res.render("Exchangebooks", {Exchange})
+  
+//   });
 
-    
-//     })
-// });
 
 
 
@@ -120,13 +111,56 @@ router.post("/exchange", upload.single('photo'),function (req, res, next) {
       description: req.body.description,
       genre: req.body.genre,
       available:req.body.available,
+      exchangegenre:req.body.exchangegenre,
       photo: req.body.photo
       
     })
   var promise = exchange.save()
   promise.then((exchange) => {
-    res.redirect('/booksavailable')
-  })
+
+    Exchanges.find({ genre: req.body.exchangegenre }, function (err, Exchange) {
+      
+      console.log(Exchange);
+
+    //   Exchange.forEach(function(exchanges){
+    //   if(exchanges.exchangegenre==req.body.genre)
+    //     {
+
+    //     }
+    //   res.render('Exchangebooks',{Exchange});
+    // })
+      
+    // Exchanges.aggregate([
+    //   {
+    //     $lookup:
+    //     {
+    //       from: 'exchanges',
+    //       localField: 'exchangegenre',
+    //       foreignField: 'req.body.genre',
+    //       as : 'same'
+          
+    //     }
+        
+    //   }
+    //   // {
+    //   //   $match: { "same": { $ne: [] } }
+    //   // }
+        
+    //      ]).exec((err,Exchange)=>{
+    //        if(err)
+    //        {
+    //          res.render('error');
+    //        }
+    //      if(Exchange)
+    //      { console.log(Exchange);
+    //        res.render('Exchangebooks',{Exchange});
+    //      }
+    //   })
+    //   .catch((err) => {
+    //     res.render('error')
+    //   });
+    })
+    })
 });
 
 
