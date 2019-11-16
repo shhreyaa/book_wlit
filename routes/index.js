@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var router = express.Router();
 var Exchanges = require('../models/Exchange');
 var Sellbooks = require('../models/Sell');
-var Search=require('../models/Search')
+// var Search = require('../models/Search');
 
 
 const multer = require('multer');
@@ -119,15 +119,22 @@ router.post("/exchange", upload.single('photo'),function (req, res, next) {
   promise.then((exchange) => {
 
     Exchanges.find({ genre: req.body.exchangegenre }, function (err, Exchange) {
+      var exchangebooks=[];
+      for(i=0;i<Exchange.length;i++)
+      {
+        if(Exchange[i].genre == req.body.genre){
+          exchangebooks[i]=Exchange[i];
+        }
+        else
+        {
+          continue;
+        }
+
+      }
+      console.log(exchangebooks);
       
-      console.log(Exchange);
-
-    //   Exchange.forEach(function(exchanges){
-    //   if(exchanges.exchangegenre==req.body.genre)
-    //     {
-
-    //     }
-    //   res.render('Exchangebooks',{Exchange});
+     
+      res.render('Exchangebooks',{exchangebooks});
     // })
       
     // Exchanges.aggregate([

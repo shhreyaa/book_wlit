@@ -57,7 +57,7 @@
                                       
                                       </li>
                                       <li><a href="/exchange">Exchange form </a></li>
-                                      <li><a href="/Exchangebooks">Exchange books </a></li>
+                                      <!-- <li><a href="/Exchangebooks">Exchange books </a></li> -->
                                       <li><a href="/profile">Log Out</a></li>
                       </ul> <br>
                     <form method='post' action="/searchsell">
@@ -120,37 +120,6 @@
     </div>
 </div>
 
-<<<<<<< HEAD
-            </div>
-        </nav>
-
-        <div class="overlay">
-            <div class="gtco-container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-justify">
-                        <div class="display-t">
-                            <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                                <h3><br><br><br><br><br><br><br> Sell details</h3>
-
-            <div id="userphoto"><img src="<%= Sell.photo %>" alt="default avatar"></div>
-            <p>Name:<br><%= Sell.name %></p>
-            <p>Description:<br><%= Sell.description %></p>
-            <p>Author:<br><%= Sell.author %></p>
-            <p>Genre:<br><%= Sell.genre  %></p>
-            <p>Available:<br><%= Sell.available %></p>
-            <p>Price:<br><%= Sell.price %></p>
-            <div class="form-group">
-                <a href='/updateOnesell/<%= Sell._id %>'>
-                    <input type='button' value='Edit'>
-                </a>
-            </div>
-            <div class="form-group">
-                <a href='/deleteOnesell/<%= Sell._id %>'>
-                    <input type='button' value='Delete'>
-                </a>
-            </div>
-          
-=======
 <div class="split right">
     <div class="centered">
       <br><br><br><br><br><br><br><br><br>
@@ -163,7 +132,6 @@
         <h3>Price:<%= Sell.price %></h3>
         <h3>Condition:<%= Sell.Condition %></h3>
         <h3> Description:</h3>
->>>>>>> 8449d7ea8b44e9d644bb56100c6377c62991dedd
         
         <%= Sell.description %><br>
         <div class="forTitle">
