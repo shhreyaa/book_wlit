@@ -7,6 +7,7 @@ const SellSchema = mongoose.Schema({
     name: String,
     author: String,
     genre: String,
+    condition: String,
     description: String,
     price: Number,
     available: String,

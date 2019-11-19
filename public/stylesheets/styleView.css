@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon/icomoon.eot?srf3rx");
+  src: url("../fonts/icomoon/Volkorn-Regular.ttf");
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
@@ -11,7 +11,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Raleway", Arial, sans-serif;
+  font-family: "Raleway", 'Times New Roman', Times, serif, sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -1339,7 +1339,7 @@ ol li{
   
 }
 img:hover{
-  transform:scale(1.06);
+  transform:scale(1.08);
   background: rgb(172, 97, 197) /*purple*/
  
 }
@@ -1394,12 +1394,13 @@ input, textarea{
 .fortext{
   width: 90%;
   height: 100%;
-   padding-top:5px;
+  padding-top:5px;
   padding-right: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
   background-color: rgba(93, 56, 167);
   text-transform: uppercase;
+  position: relative;
 }
 .forPicture{
    width: 90%;
@@ -1421,6 +1422,10 @@ input, textarea{
   background-color: rgba(93, 56, 167);
   text-transform: uppercase;
 }
+.sec: hover{
+transform:scale(1.08);
+}
+
 
 
 
