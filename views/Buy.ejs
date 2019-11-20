@@ -113,7 +113,7 @@
                     <h1> BOOKS FOR SELL</h1>
                     <div class="exchange">
                         <% Sell.forEach(function(sell){ %>
-
+                        
                         <div class="row row-pb-md">
                             <div class="col-md-4 animate-box" data-animate-effect="fadeIn">
                                 <div class="gtco-staff">
@@ -126,14 +126,14 @@
 
                                         <a href='/viewOnesell/<%= sell._id %>'><img
                                                 src="/uploads/<%= sell.imagename %>" alt="image" class="imagelist"
-                                                width=200%></a><br>
+                                                width="300" height="500"></a><br>
                                     </div>
                                 <div class="forprice">
                                     <h3> <a href='/viewOnesell/<%= sell._id %>'>
-                                    PRICE:      <%= sell.price %></a><br><br>
-                                    </h3>
+                                    PRICE:      <%= sell.price %></a>
+                                    </h3> 
                                 </div>
-                             </div>
+                             </div> <br><br>
                             </div>
                             <% }) %>
 
