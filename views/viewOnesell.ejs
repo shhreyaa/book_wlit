@@ -144,13 +144,14 @@
       <button  onclick="openForm()" class="btn btn-primary">Open Form</button>
 
 <div class="form-popup" id="myForm">
-  <form action="/confirmbuy"  method="post" class="form-container">
+  <form action="/confirmbuy/<%=Sell._id %>"  method="post" class="form-container">
     <h5>An email will be sent to seller on confirmation</h5>
 
     <input type="text" placeholder="Name" name="username" required>
    <input type="text" placeholder="Contact no:" name="contact" required>
     <input type="text" placeholder="Email" name="useremail" required>
     <input type="hidden" name="selleremail" value="<%= Sell.useremail %>">
+    
     <button type="submit" class="btn">Confirm</button>
     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
     

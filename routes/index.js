@@ -19,7 +19,7 @@ var transporter = nodemailer.createTransport({
     pass: 'book@123'
   }
 });
-router.post('/confirmbuy', function(req, res, next) {
+router.post('/confirmbuy/:_id', function(req, res, next) {
   var mailOptions = {
     from: 'bookstop.wlit@gmail.com',
     to:req.body.selleremail,
@@ -33,6 +33,19 @@ router.post('/confirmbuy', function(req, res, next) {
       console.log('Email sent: ' + info.response);
     }
   } )
+  Sellbooks.update(//function(err,movie)
+  
+    {_id: req.params._id},
+    {$set: {
+      available:"not available"
+  
+    }}
+
+  )
+    .catch((err) => {
+      res.render('error')
+    })
+  
   res.redirect("/buy")
 }
 );
@@ -124,6 +137,7 @@ router.post("/exchange", upload,function (req, res, next) {
       genre: req.body.genre,
       available:req.body.available,
       exchangegenre:req.body.exchangegenre,
+    
       imagename :imageFile
       
       
@@ -197,6 +211,7 @@ router.post("/sell",upload, function (req, res) {
       genre: req.body.genre,
       price : req.body.price,
       available:req.body.available,
+      booked:false,
       imagename :imageFile
     })
   var promise = sell.save()
@@ -248,7 +263,10 @@ router.get('/updateOnesell/:_id', function (req, res, next) {
   Sellbooks.findOne({ _id: req.params._id }).then((sell) =>//function(err,movie)
   {
 
-    res.render('updateonesell', { sell });
+    $set: {
+      available:"not available";
+  
+    }
 
   })
     .catch((err) => {
@@ -312,12 +330,12 @@ router.post('/updateviewOnesell/', function (req, res, next) {
 router.post("/searchsell", function (req, res, next) {
  
   name=req.body.name
-Sellbooks.findOne({name})
+Sellbooks.find({name})
 .then((Sell) =>
 {
-  console.log('book selected', Sell);
+  
 
-  res.render('viewOnesell', {Sell});
+  res.render('buy', {Sell});
 })
 .catch((err) => {
   res.render('error')
@@ -330,9 +348,9 @@ Sellbooks.findOne({name})
 router.post("/searchexchange", function (req, res, next) {
  
   name=req.body.name
-Exchanges.findOne({name}).then((exchange) =>//function(err,movie)
+Exchanges.find({name}).then((exchange) =>//function(err,movie)
 {
-  res.render('viewOneexchange', {exchange});
+  res.render('Exchangebooks', {exchange});
   
 
 })

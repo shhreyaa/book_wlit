@@ -11,6 +11,7 @@ const ExchangeSchema = mongoose.Schema(
         exchangegenre:String,
         // condition: String,
         imagename: String,
+        booked:false,
          createdDate: {
               type: Date,
                default: Date.now
