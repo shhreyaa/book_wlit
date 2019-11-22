@@ -147,21 +147,21 @@ router.post("/exchange", upload,function (req, res, next) {
 
     Exchanges.find({ genre: req.body.exchangegenre }, function (err, Exchange) {
       var exchangebooks=[];
-      for(i=0;i<Exchange.length;i++)
-      {
-        if(Exchange[i].genre == req.body.genre){
-          exchangebooks[i]=Exchange[i];
-        }
-        else
-        {
-          continue;
-        }
+      // for(i=0;i<Exchange.length;i++)
+      // {
+      //   if(Exchange[i].genre == req.body.genre){
+      //     exchangebooks[i]=Exchange[i];
+      //   }
+      //   else
+      //   {
+      //     continue;
+      //   }
 
-      }
-      console.log(exchangebooks);
+      // }
+      console.log(Exchange);
       
      
-      res.render('Exchangebooks',{exchangebooks});
+      res.render('Exchangebooks',{Exchange});
     // })
       
     // Exchanges.aggregate([
