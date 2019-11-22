@@ -12,6 +12,7 @@ const SellSchema = mongoose.Schema({
     price: Number,
     available: String,
     imagename: String,
+    booked:false,
     createdDate: {
         type: Date,
         default: Date.now

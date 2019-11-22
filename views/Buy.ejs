@@ -129,10 +129,15 @@
                                                 width="200" height="300"></a><br>
                                     </div>
                                 <div class="forprice">
-                                    <h3> <a href='/viewOnesell/<%= sell._id %>'>
+                                    <h2> <a href='/viewOnesell/<%= sell._id %>'>
                                     PRICE:      <%= sell.price %></a>
-                                    </h3> 
+                                    <br>
+                                    <%= sell.available %>
+                                    
+
+                                    </h2> 
                                 </div>
+                                
                              </div> <br><br>
                             </div>
                             <% }) %>
