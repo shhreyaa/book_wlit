@@ -1373,6 +1373,8 @@ input, textarea{
 
 .forbg{
     background-image: url("bookpattern.jpg");
+     opacity: 0.5;
+  filter: alpha(opacity=50);;
 }
 .testover{
     background-color: rgba(0, 0, 0, 0.8);
@@ -1392,7 +1394,7 @@ input, textarea{
 
 }
 .fortext{
-  width: 90%;
+  width: 80%;
   height: 100%;
   padding-top:5px;
   padding-right: 5px;
@@ -1403,7 +1405,7 @@ input, textarea{
   position: relative;
 }
 .forPicture{
-   width: 90%;
+   width: 80%;
   height: 100%;
    padding-top:5px;
   padding-right: 5px;
@@ -1413,7 +1415,7 @@ input, textarea{
   text-transform: uppercase;
 }
 .forprice{
-   width: 90%;
+   width: 80%;
   height: 100%;
    padding-top:5px;
   padding-right: 5px;
@@ -1424,6 +1426,11 @@ input, textarea{
 }
 .sec: hover{
 transform:scale(1.08);
+}
+.fortrans{
+  
+  background: rgb(255, 255, 255,0.6)/* For IE8 and earlier */
+}
 }
 
 
